@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأستاذة أم نهال - ابتدائية العقيد لطفي</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .teacher-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .home-button {
+            display: block;
+            margin: 30px auto 0;
+            padding: 10px 20px;
+            background: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .home-button:hover {
+            background: #c0392b;
+        }
+        .teacher-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .islamic-frame {
+            position: relative;
+            padding: 20px;
+        }
+        .islamic-pattern {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url('islamic-pattern.png');
+            background-size: 50px 50px;
+        }
+        .top-left {
+            top: 0;
+            left: 0;
+        }
+        .top-right {
+            top: 0;
+            right: 0;
+            transform: rotate(90deg);
+        }
+        .bottom-left {
+            bottom: 0;
+            left: 0;
+            transform: rotate(180deg);
+        }
+        .bottom-right {
+            bottom: 0;
+            right: 0;
+            transform: rotate(270deg);
+        }
+        .teacher-content {
+            padding: 20px;
+        }
+        .teacher-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .teacher-avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 5px solid #e74c3c;
+        }
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .teacher-name {
+            font-size: 2.5rem;
+            color: #e74c3c;
+            margin: 0;
+        }
+        .teacher-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin: 10px 0 0;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .social-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        .social-link i {
+            font-size: 1.5rem;
+        }
+        .facebook {
+            background: #1877F2;
+            color: white;
+        }
+        .facebook:hover {
+            background: #166FEA;
+        }
+        .instagram {
+            background: linear-gradient(45deg, #E1306C, #C13584, #833AB4, #517FA4);
+            color: white;
+        }
+        .instagram:hover {
+            transform: translateY(-2px) rotate(3deg);
+        }
+        .whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        .whatsapp:hover {
+            background: #21BE5B;
+        }
+        .youtube {
+            background: #FF0000;
+            color: white;
+        }
+        .youtube:hover {
+            background: #E52D27;
+        }
+        .twitter {
+            background: #1DA1F2;
+            color: white;
+        }
+        .twitter:hover {
+            background: #1C9CEA;
+        }
+        .email {
+            background: linear-gradient(45deg, #FF5733, #FF4444);
+            color: white;
+        }
+        .email:hover {
+            transform: translateY(-2px) scale(1.02);
+        }
+        .teacher-info {
+            padding: 20px;
+        }
+        .info-section {
+            margin-bottom: 30px;
+        }
+        .info-section h2 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        .info-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .info-section li {
+            margin-bottom: 10px;
+        }
+        .islamic-footer {
+            background-image: url('islamic-pattern.png');
+            background-size: 50px 50px;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .footer-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('islamic-pattern.png');
+            background-size: 50px 50px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="teacher-page">
+        <a href="index.html" class="home-button">
+            <i class="fas fa-home"></i>
+            العودة للرئيسية
+        </a>
+        <div class="teacher-container">
+            <div class="islamic-frame">
+                <div class="islamic-pattern top-left"></div>
+                <div class="islamic-pattern top-right"></div>
+                <div class="islamic-pattern bottom-left"></div>
+                <div class="islamic-pattern bottom-right"></div>
+                
+                <div class="teacher-content">
+                    <div class="teacher-header">
+                        <div class="teacher-avatar">
+                            <img src="images/om.jpg" alt="الأستاذة أم نهال" class="profile-image">
+                        </div>
+                        <h1 class="teacher-name">الأستاذة أم نهال</h1>
+                        <div class="teacher-title">مدرسة اللغة العربية</div>
+                        
+                        <div class="social-links">
+                            <a href="#" target="_blank" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span class="social-text">Facebook</span>
+                            </a>
+                            <a href="#" target="_blank" class="social-link instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span class="social-text">Instagram</span>
+                            </a>
+                            <a href="#" target="_blank" class="social-link whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span class="social-text">WhatsApp</span>
+                            </a>
+                            <a href="#" class="social-link email" style="background-color: #E74C3C; color: white; padding: 10px; border-radius: 5px; text-decoration: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                                <i class="fas fa-envelope"></i>
+                                <span class="social-text">مراسلة الأستاذة أم نهال</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="teacher-info">
+                        <div class="info-section">
+                            <h2><i class="fas fa-graduation-cap"></i> المؤهلات العلمية</h2>
+                            <ul>
+                                <li>بكالوريوس في اللغة العربية وآدابها</li>
+                                <li>شهادة في التربية وعلم النفس التربوي</li>
+                                <li>دورات متخصصة في طرق تدريس اللغة العربية</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-section">
+                            <h2><i class="fas fa-chalkboard-teacher"></i> الخبرات التدريسية</h2>
+                            <ul>
+                                <li>أكثر من 10 سنوات خبرة في تدريس اللغة العربية</li>
+                                <li>تدريس جميع مستويات المرحلة الابتدائية</li>
+                                <li>إعداد مناهج تعليمية متخصصة</li>
+                                <li>تدريس النحو والصرف والإملاء</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-section">
+                            <h2><i class="fas fa-award"></i> الإنجازات</h2>
+                            <ul>
+                                <li>حصول الطلاب على مراكز متقدمة في مسابقات اللغة العربية</li>
+                                <li>تطوير أساليب تعليمية مبتكرة لتحسين مهارات القراءة والكتابة</li>
+                                <li>المشاركة في ورش عمل لتدريب المعلمين</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-section">
+                            <h2><i class="fas fa-book-reader"></i> المواد التي تدرسها</h2>
+                            <ul>
+                                <li>اللغة العربية - جميع الصفوف الابتدائية</li>
+                                <li>قواعد اللغة العربية</li>
+                                <li>القراءة والمطالعة</li>
+                                <li>الإملاء والخط العربي</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-section">
+                            <h2 class="rainbow-text"><i class="fas fa-book"></i> أعمال الأستاذة</h2>
+                            <ul>
+                                <li>إعداد دروس تفاعلية في اللغة العربية</li>
+                                <li>تصميم أنشطة تعليمية إبداعية</li>
+                                <li>الإشراف على النشاط الثقافي والأدبي بالمدرسة</li>
+                                <li>إعداد مسابقات لغوية لتنمية المهارات اللغوية</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="islamic-footer">
+                <div class="footer-pattern"></div>
+                <p>جميع الحقوق محفوظة 2025 - ابتدائية العقيد لطفي أولاد جلال</p>
+            </footer>
+        </div>
+                <a href="#" target="_blank" class="social-link twitter">
+                    <i class="fab fa-twitter"></i>
+                    <span class="social-text">Twitter</span>
+                    <span class="tooltip">ليس بعد</span>
+                </a>
+                <a href="message-nahal.html" class="social-link email" data-tooltip="الإميل خاص ، يمكنك الاتصال بالإدارة" style="background-color: #FF5733; color: white; padding: 10px; border-radius: 5px; text-decoration: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                    <i class="fas fa-envelope"></i>
+                    <span class="social-text">مراسلة الأستاذة أم نهال</span>
+                    <span class="tooltip">الإميل خاص ، يمكنك الاتصال بالإدارة</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="teacher-content">
+            <div class="teacher-section">
+                <h2>نبذة عن الأستاذة</h2>
+                <p>الأستاذة أم نهال هي معلمة متميزة في مادة اللغة العربية، تتميز بخبرتها الطويلة في مجال التعليم وحبها للطلاب. تسعى دائماً لتطوير أساليب التدريس وتحقيق أفضل النتائج لطلابها.</p>
+            </div>
+
+            <div class="teacher-section">
+                <h2>الإسهامات والإنجازات</h2>
+                <div class="teacher-achievements">
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h3 class="achievement-title">خبرة تعليمية</h3>
+                        <p class="achievement-description">أكثر من 15 عاماً من الخبرة في تدريس اللغة العربية</p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                        <h3 class="achievement-title">الجوائز</h3>
+                        <p class="achievement-description">فازت بعدة جوائز فردية تثبت تفوقها و مدى التزامها في منطقةها التعليمية عدة مرات</p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-book-reader"></i></div>
+                        <h3 class="achievement-title">تطوير المناهج</h3>
+                        <p class="achievement-description">ساهمت في تطوير مناهج اللغة العربية في المدرسة</p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-users"></i></div>
+                        <h3 class="achievement-title">الطلاب</h3>
+                        <p class="achievement-description">ساهمت في تفوق العديد من طلابها في امتحانات نهاية مرحلة التعليم الابتدائي</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teacher-section">
+                <h2>الرسالة التعليمية</h2>
+                <p>أؤمن بأن التعليم هو الركيزة الأساسية لبناء مجتمع متعلم وواعي. أسعى دائماً لتقديم أفضل ما عندي لطلابي، وتحفيزهم على التعلم المستمر والتفوق. أؤمن بأن كل طالب لديه إمكانات فريدة، وأسعى لمساعدتهم في اكتشافها وتطويرها.</p>
+            </div>
+
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                الرجوع إلى الصفحة الرئيسية
+            </a>
+        </div>
+    </div>
+</body>
+</html>

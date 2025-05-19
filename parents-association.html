@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جمعية أولياء التلاميذ - مدرسة العربي التبسي</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* أنماط خاصة بصفحة الجمعية */
+        .hero-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: url('images/55.png') center/cover no-repeat;
+            opacity: 0.03;
+            z-index: 0;
+            transform: scale(0.5);
+        }
+
+        .association-content {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 40px;
+            margin: -50px auto 50px;
+            position: relative;
+            z-index: 1;
+            transform: translateY(0);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .association-img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 15px auto;
+            display: block;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .association-img:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-title {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80px;
+            height: 4px;
+            background: #3498db;
+            border-radius: 2px;
+        }
+
+        .btn-association {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn-association:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+        }
+
+        .btn-association i {
+            margin-left: 8px;
+        }
+
+        .btn-back {
+            background: #95a5a6;
+        }
+
+        .btn-back:hover {
+            background: #7f8c8d;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content-text {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: #f8f9fa;
+            border-right: 4px solid #3498db;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .highlight-box:hover {
+            background: #f1f8fe;
+            transform: translateX(10px);
+        }
+    </style>
+</head>
+<body>
+    <!-- زر تحكم بالصوت -->
+    <div id="audio-control" style="position: fixed; top: 10px; right: 10px; z-index: 1000; background: rgba(255, 255, 255, 0.8); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+        <i class="fas fa-volume-up" id="audio-icon" style="font-size: 20px; color: #2c3e50;"></i>
+    </div>
+    
+    <!-- شريط التنقل -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            فضاء الأولياء
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="parental-partnership.html">شراكة تربوية</a></li>
+                            <li><a class="dropdown-item" href="continuous-communication.html">تواصل مستمر</a></li>
+                            <li><a class="dropdown-item" href="community-participation.html">مشاركة مجتمعية</a></li>
+                            <li><a class="dropdown-item active" href="parents-association.html">جمعية أولياء التلاميذ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- قسم البطل -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">جمعية أولياء التلاميذ</h1>
+            <p class="lead">شراكة فاعلة من أجل تعليم أفضل</p>
+        </div>
+    </section>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="association-content">
+                    <div class="text-center mb-4">
+                        <img src="images/awlya.png" alt="اجتماع أولياء التلاميذ" class="association-img">
+                    </div>
+                    <h2 class="section-title">عن الجمعية</h2>
+                    <p class="content-text">
+                        لقد أُنشئت جمعية أولياء التلاميذ لتكون همزة وصلٍ بين الأسرة والمؤسسة التربوية، وذلك إيمانًا بأهمية التعاون بين الطرفين في تحقيق النجاح الدراسي والنفسي للتلميذ. فالتلميذ لا يعيش في المدرسة فقط، بل يحمل معه كل ما يتلقاه من تربية وتعليم إلى البيت، ويعود إلى المدرسة حاملًا تأثيرات الوسط العائلي. ومن هنا جاءت ضرورة وجود طرف ثالث يُعبّر عن صوت العائلات داخل المدرسة، ويتفاعل مع الإدارة والأساتذة، ويشارك في بناء بيئة تعليمية سليمة ومتوازنة.
+                    </p>
+
+                    <div class="highlight-box">
+                        <h4 class="mb-3">واجبات الجمعية</h4>
+                        <p class="content-text">
+                            تُعدّ من أبرز واجبات جمعية أولياء التلاميذ الدفاع عن مصلحة التلاميذ، سواء من الناحية التعليمية أو الاجتماعية أو الصحية. فهي تتابع ظروف التمدرس، وتحرص على تحسينها من خلال تقديم مقترحات للإدارة، ومراقبة الخدمات، والمشاركة في مشاريع المؤسسة. كما تعمل على نشر الوعي التربوي لدى الأولياء من خلال تنظيم لقاءات، ندوات، ودورات تحسيسية حول مواضيع مثل التربية الحديثة، مخاطر الإنترنت، أو الوقاية من العنف المدرسي.
+                        </p>
+                    </div>
+
+                    <h3 class="mt-5 mb-4">العلاقة مع الإدارة المدرسية</h3>
+                    <p class="content-text">
+                        العلاقة بين الجمعية والإدارة المدرسية علاقة تكامل وتعاون، لا وصاية ولا تدخل. فالإدارة تسير المؤسسة وفق النصوص التنظيمية، أما الجمعية فتساندها في مهامها، وتقدّم لها الدعم الاجتماعي والمادي عند الحاجة، مثل المشاركة في تجهيزات القسم، أو تنظيم رحلات مدرسية، أو دعم بعض التلاميذ المعوزين. كذلك، فإن الأساتذة يجدون في الجمعية طرفًا يمكن من خلاله إيصال انشغالاتهم إلى الأولياء، سواء تعلق الأمر بمستوى التحصيل، السلوك، أو الدعم المنزلي المطلوب.
+                    </p>
+
+                    <div class="highlight-box">
+                        <h4 class="mb-3">مجالات النشاط</h4>
+                        <p class="content-text">
+                            أما مجالات نشاط الجمعية فهي واسعة ومتنوعة، تشمل المساهمة في تحسين المحيط المدرسي، تنظيم أنشطة ثقافية وترفيهية، تقديم جوائز تشجيعية للمتفوقين، اقتراح حلول لبعض المشاكل التي تعيق السير البيداغوجي، كما تسعى لتفعيل الشراكة بين المدرسة والمحيط الخارجي، من خلال إشراك الجمعيات المحلية، البلديات، أو المؤسسات الاقتصادية.
+                        </p>
+                    </div>
+
+                    <p class="content-text">
+                        إن جمعية أولياء التلاميذ ليست كيانًا شكليًّا، بل لبنة أساسية في صرح المنظومة التربوية، لأنها تُجسّد التعاون الفعلي بين المدرسة والأسرة. وكلما كانت هذه الجمعية فعالة ومنظمة، انعكس ذلك إيجابًا على مناخ المؤسسة، وعلى مستوى التلميذ وراحته النفسية. فالعلم لا يُبنى في العزلة، بل في كنف الحوار، الشراكة، والثقة المتبادلة.
+                    </p>
+
+                    <div class="text-center mt-5">
+                        <a href="association-contributions.html" class="btn btn-association">
+                            <i class="fas fa-hands-helping"></i> إسهامات الجمعية
+                        </a>
+                        <a href="index.html" class="btn btn-association btn-back">
+                            <i class="fas fa-arrow-right"></i> العودة
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- تذييل الصفحة -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2025 - ابتدائية العقيد لطفي أولاد جلال - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // كود التحكم بالصوت
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = new Audio('rel.mp3');
+            audio.loop = true;
+            const audioControl = document.getElementById('audio-control');
+            const audioIcon = document.getElementById('audio-icon');
+            
+            // محاولة تشغيل الصوت تلقائياً
+            const playPromise = audio.play();
+            
+            // معالجة خطأ التشغيل التلقائي
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log('فشل التشغيل التلقائي:', error);
+                    audioControl.style.display = 'flex'; // إظهار زر التحكم في حالة الفشل
+                });
+            }
+            
+            // حدث النقر على زر التحكم
+            audioControl.addEventListener('click', function() {
+                if (audio.paused) {
+                    audio.play();
+                    audioIcon.className = 'fas fa-volume-up';
+                } else {
+                    audio.pause();
+                    audioIcon.className = 'fas fa-volume-mute';
+                }
+            });
+            
+            // تحديث الأيقونة عند انتهاء الصوت
+            audio.addEventListener('ended', function() {
+                audioIcon.className = 'fas fa-volume-mute';
+            });
+
+            // إضافة تأثيرات حركية للعناوين عند التمرير
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.content-text, .highlight-box');
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateX(0)';
+                    }
+                });
+            }
+
+            // تهيئة العناصر للتحريك
+            document.querySelectorAll('.content-text, .highlight-box').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateX(50px)';
+                element.style.transition = 'all 0.6s ease-out';
+            });
+
+            // تفعيل التأثير عند التمرير
+            window.addEventListener('scroll', animateOnScroll);
+            // تفعيل التأثير عند التحميل
+            animateOnScroll();
+        });
+    </script>
+</body>
+</html>

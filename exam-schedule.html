@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برنامج اختبارات الفصل الثالث | المدرسة الابتدائية العقيد لطفي</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .exam-header {
+            background: linear-gradient(135deg, #2196f3, #0d47a1);
+            color: white;
+            padding: 2.5rem;
+            text-align: center;
+            border-radius: 25px;
+            margin: 2.5rem 0;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .exam-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,160L48,160C96,160,192,160,288,160C384,160,480,160,576,160C672,160,768,160,864,160C960,160,1056,160,1152,160C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            z-index: 0;
+        }
+
+        .exam-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .exam-header p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+            line-height: 1.8;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #43a047;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(67, 160, 71, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            transform: scale(1.15);
+            background: #388e3c;
+        }
+
+        .exam-table {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            margin: 3rem 0;
+            transition: transform 0.3s ease;
+        }
+
+        .exam-table:hover {
+            transform: translateY(-5px);
+        }
+
+        /* جدول السنة الخامسة */
+        .exam-table:nth-of-type(1) {
+            border: 3px solid #43a047;
+        }
+        .exam-table:nth-of-type(1) th {
+            background: linear-gradient(135deg, #81c784, #43a047);
+            color: #1a237e;
+        }
+        .exam-table:nth-of-type(1) tr:nth-child(even) {
+            background: #e8f5e9;
+        }
+        .exam-table:nth-of-type(1) tr:hover {
+            background: #c8e6c9;
+        }
+
+        /* جدول السنة الرابعة */
+        .exam-table:nth-of-type(2) {
+            border: 3px solid #2196f3;
+        }
+        .exam-table:nth-of-type(2) th {
+            background: linear-gradient(135deg, #64b5f6, #2196f3);
+            color: #fff;
+        }
+        .exam-table:nth-of-type(2) tr:nth-child(even) {
+            background: #e3f2fd;
+        }
+        .exam-table:nth-of-type(2) tr:hover {
+            background: #bbdefb;
+        }
+
+        /* جدول السنة الثالثة */
+        .exam-table:nth-of-type(3) {
+            border: 3px solid #f57c00;
+        }
+        .exam-table:nth-of-type(3) th {
+            background: linear-gradient(135deg, #ffb74d, #f57c00);
+            color: #fff;
+        }
+        .exam-table:nth-of-type(3) tr:nth-child(even) {
+            background: #fff3e0;
+        }
+        .exam-table:nth-of-type(3) tr:hover {
+            background: #ffe0b2;
+        }
+
+        /* جدول السنة الثانية والثالثة */
+        .exam-table:nth-of-type(4) {
+            border: 3px solid #ab47bc;
+        }
+        .exam-table:nth-of-type(4) th {
+            background: linear-gradient(135deg, #ce93d8, #ab47bc);
+            color: #fff;
+        }
+        .exam-table:nth-of-type(4) tr:nth-child(even) {
+            background: #f3e5f5;
+        }
+        .exam-table:nth-of-type(4) tr:hover {
+            background: #e1bee7;
+        }
+
+        /* جدول السنة الثالثة */
+        .exam-table:nth-of-type(5) {
+            border: 3px solid #00bcd4;
+        }
+        .exam-table:nth-of-type(5) th {
+            background: linear-gradient(135deg, #4dd0e1, #00bcd4);
+            color: #fff;
+        }
+        .exam-table:nth-of-type(5) tr:nth-child(even) {
+            background: #e0f7fa;
+        }
+        .exam-table:nth-of-type(5) tr:hover {
+            background: #b2ebf2;
+        }
+
+        /* جدول السنة الأولى والثانية */
+        .exam-table:nth-of-type(6) {
+            border: 3px solid #e91e63;
+        }
+        .exam-table:nth-of-type(6) th {
+            background: linear-gradient(135deg, #f48fb1, #e91e63);
+            color: #fff;
+        }
+        .exam-table:nth-of-type(6) tr:nth-child(even) {
+            background: #fce4ec;
+        }
+        .exam-table:nth-of-type(6) tr:hover {
+            background: #f8bbd0;
+        }
+
+        .exam-table td {
+            font-size: 1.2rem;
+            padding: 1.5rem;
+            vertical-align: middle;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #81c784, #43a047);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 15px rgba(67, 160, 71, 0.3);
+        }
+
+        .note-box {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .note-box::before {
+            content: 'ملاحظة مهمة';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #4caf50;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .note-box p {
+            font-style: italic;
+            color: #333;
+            line-height: 1.8;
+            margin-top: 1.5rem;
+        }
+
+        .date-stamp {
+            text-align: left;
+            color: #666;
+            font-size: 1rem;
+            margin-top: 3rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border-radius: 15px;
+        }
+        .search-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 1rem 40px 1rem 1rem;
+            border: 2px solid #43a047;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        #searchInput:focus {
+            outline: none;
+            border-color: #2e7d32;
+            box-shadow: 0 0 0 3px rgba(67, 160, 71, 0.2);
+        }
+
+        .search-container i {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #43a047;
+        }
+
+        .exam-table tr.hide {
+            display: none;
+        }
+
+        .exam-table tr.show {
+            display: table-row;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="window.location.href='index.html'">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+
+    <div class="search-section">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="ابحث عن اليوم..." onkeyup="searchByDay()">
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+
+    <div class="exam-header">
+        <h1>برنامج اختبارات الفصل الثالث</h1>
+        <p>مديرية التربية لولاية أولاد جلال<br>
+           المدرسة الابتدائية العقيد لطفي<br>
+           السنة الدراسية: 2024/2025</p>
+    </div>
+
+    <div class="exam-table">
+        <div class="section-title">السنة الخامسة</div>
+        <table>
+            <tr>
+                <th>اليوم</th>
+                <th>الفترة الصباحية</th>
+                <th>الفترة المسائية</th>
+            </tr>
+            <tr>
+                <td>الأحد 18 ماي</td>
+                <td>تربية إسلامية - لغة عربية</td>
+                <td>تربية بدنية</td>
+            </tr>
+            <tr>
+                <td>الإثنين 19 ماي</td>
+                <td>تربية علمية وتكنولوجية</td>
+                <td>تربية مدنية</td>
+            </tr>
+            <tr>
+                <td>الثلاثاء 20 ماي</td>
+                <td>رياضيات</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>الأربعاء 21 ماي</td>
+                <td>تاريخ وجغرافيا - لغة إنجليزية</td>
+                <td>تربية موسيقية</td>
+            </tr>
+            <tr>
+                <td>الخميس 22 ماي</td>
+                <td>لغة فرنسية + تربية فنية</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="exam-table">
+        <div class="section-title">السنة الرابعة</div>
+        <table>
+            <tr>
+                <th>اليوم</th>
+                <th>الفترة الصباحية</th>
+                <th>الفترة المسائية</th>
+            </tr>
+            <tr>
+                <td>الأحد 18 ماي</td>
+                <td>لغة عربية</td>
+                <td>تربية إسلامية</td>
+            </tr>
+            <tr>
+                <td>الإثنين 19 ماي</td>
+                <td>رياضيات</td>
+                <td>لغة فرنسية</td>
+            </tr>
+            <tr>
+                <td>الثلاثاء 20 ماي</td>
+                <td>لغة إنجليزية - تربية علمية وتكنولوجية</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>الأربعاء 21 ماي</td>
+                <td>تاريخ وجغرافيا</td>
+                <td>تربية موسيقية</td>
+            </tr>
+            <tr>
+                <td>الخميس 22 ماي</td>
+                <td>تربية مدنية</td>
+                <td>ت. فنية</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="exam-table">
+        <div class="section-title">السنة الثالثة</div>
+        <table>
+            <tr>
+                <th>اليوم</th>
+                <th>الفترة الصباحية</th>
+                <th>الفترة المسائية</th>
+            </tr>
+            <tr>
+                <td>الأحد 18 ماي</td>
+                <td>لغة عربية</td>
+                <td>لغة فرنسية</td>
+            </tr>
+            <tr>
+                <td>الإثنين 19 ماي</td>
+                <td>تربية علمية - لغة إنجليزية</td>
+                <td>تربية موسيقية</td>
+            </tr>
+            <tr>
+                <td>الثلاثاء 20 ماي</td>
+                <td>رياضيات</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>الأربعاء 21 ماي</td>
+                <td>تربية إسلامية</td>
+                <td>تربية فنية</td>
+            </tr>
+            <tr>
+                <td>الخميس 22 ماي</td>
+                <td>تاريخ وجغرافيا</td>
+                <td>ت. مدنية</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="exam-table">
+        <div class="section-title">السنة الأولى والثانية</div>
+        <table>
+            <tr>
+                <th>اليوم</th>
+                <th>الفترة الصباحية</th>
+                <th>الفترة المسائية</th>
+            </tr>
+            <tr>
+                <td>الأحد 18 ماي</td>
+                <td>لغة عربية</td>
+                <td>تربية فنية</td>
+            </tr>
+            <tr>
+                <td>الإثنين 19 ماي</td>
+                <td>رياضيات</td>
+                <td>تربية موسيقية</td>
+            </tr>
+            <tr>
+                <td>الثلاثاء 20 ماي</td>
+                <td>تربية إسلامية</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="note-box">
+        <p>
+            ملاحظة: بالنسبة لاختبارات التربية البدنية تُجرى في حصصها العادية لجميع الأقسام.<br>
+            - الدراسة عادية خلال فترة الاختبارات.
+        </p>
+    </div>
+
+
+    <script>
+        function searchByDay() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+            const tables = document.querySelectorAll('.exam-table table');
+
+            tables.forEach(table => {
+                const rows = table.getElementsByTagName('tr');
+                for (let i = 1; i < rows.length; i++) { // نبدأ من 1 لتجنب عنوان الجدول
+                    const dayCell = rows[i].getElementsByTagName('td')[0];
+                    if (dayCell) {
+                        const dayText = dayCell.textContent || dayCell.innerText;
+                        if (dayText.toUpperCase().indexOf(filter) > -1) {
+                            rows[i].classList.remove('hide');
+                            rows[i].classList.add('show');
+                        } else {
+                            rows[i].classList.remove('show');
+                            rows[i].classList.add('hide');
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

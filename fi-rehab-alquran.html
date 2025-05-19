@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>في رحاب القرآن | مدرسة العقيد لطفي</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #e65100;  /* لون برتقالي غامق */
+            --secondary-color: #ff6d00;  /* لون برتقالي متوسط */
+            --accent-color: #ffa000;    /* لون برتقالي فاتح */
+            --light-bg: #fff3e0;        /* خلفية برتقالية فاتحة */
+            --card-bg: #ffffff;          /* خلفية البطاقات */
+            --text-color: #2c3e50;      /* لون النص الرئيسي */
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin: 0.5rem 0 0;
+        }
+
+        .content {
+            padding: 2rem 0;
+            position: relative;
+        }
+
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+
+        .story-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .story-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .story-title {
+            color: var(--primary-color);
+            margin: 0 0 1rem 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .story-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .story-description {
+            color: #555;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .btn-download {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-download:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-back:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .stories-grid {
+                grid-template-columns: 1fr;
+                padding: 0 1rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* تأثيرات إسلامية */
+        .islamic-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="%231a5f2d" stroke-width="0.5" opacity="0.1"/></svg>');
+            opacity: 0.1;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .quran-icon {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="islamic-pattern"></div>
+    
+    <header class="header">
+        <div class="container">
+            <i class="fas fa-quran quran-icon"></i>
+            <h1>في رحاب القرآن</h1>
+            <p>قصص وعبر من آيات الذكر الحكيم</p>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="container">
+            <div class="stories-grid">
+                <!-- قصة 1 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">1</span>
+                            الفاتحة أم الكتاب
+                        </h3>
+                        <p class="story-description">سورة الفاتحة وأسرارها العظيمة</p>
+                        <a href="https://www.mediafire.com/file/kfo4c5h2qv9hez5/1-+%D8%A7%D9%84%D9%81%D8%A7%D8%AA%D8%AD%D8%A9+%D8%A3%D9%85+%D8%A7%D9%84%D9%83%D8%AA%D8%A7%D8%A8.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة 2 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">2</span>
+                            خليفة الله
+                        </h3>
+                        <p class="story-description">قصة آدم عليه السلام</p>
+                        <a href="https://www.mediafire.com/file/k5x2xvc6iwjweb3/2-+%D8%AE%D9%84%D9%8A%D9%81%D8%A9+%D8%A7%D9%84%D9%84%D9%87.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة 3 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">3</span>
+                            يا بني إسرائيل
+                        </h3>
+                        <p class="story-description">قصص بني إسرائيل في القرآن</p>
+                        <a href="https://www.mediafire.com/file/7vmu4ym6rtybiyt/3-+%D9%8A%D8%A7+%D8%A8%D9%86%D9%89+%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة 4 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">4</span>
+                            بقرة بني إسرائيل
+                        </h3>
+                        <p class="story-description">قصة البقرة من سورة البقرة</p>
+                        <a href="https://www.mediafire.com/file/3rk0zg9n9xrq88e/4-+%D8%A8%D9%82%D8%B1%D8%A9+%D8%A8%D9%86%D9%89+%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة 5 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">5</span>
+                            هاروت وماروت
+                        </h3>
+                        <p class="story-description">قصة الملكين هاروت وماروت</p>
+                        <a href="https://www.mediafire.com/file/sxo7iawzlxe2doc/5-+%D9%87%D8%A7%D8%B1%D9%88%D8%AA+%D9%88%D9%85%D8%A7%D8%B1%D9%88%D8%AA.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة 6 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">6</span>
+                            بيت الله
+                        </h3>
+                        <p class="story-description">قصة بناء الكعبة المشرفة</p>
+                        <a href="https://www.mediafire.com/file/pm9j3edjffgkpq3/6-+%D8%A8%D9%8A%D8%AA+%D8%A7%D9%84%D9%84%D9%87.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة 7 -->
+                <!-- القصص الجديدة -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">7</span>
+                            طالوت وجالوت
+                        </h3>
+                        <p class="story-description">قصة نبي الله طالوت مع جالوت الجبار</p>
+                        <a href="https://www.mediafire.com/file/s9lqbuyfafny6ts/9+-+%D8%B7%D8%A7%D9%84%D9%88%D8%AA+%D9%88%D8%AC%D8%A7%D9%84%D9%88%D8%AA.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">8</span>
+                            اختبار الله
+                        </h3>
+                        <p class="story-description">قصص من اختبارات الله لعباده</p>
+                        <a href="https://www.mediafire.com/file/24d9x049nl6yqkp/16+-+%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1+%D8%A7%D9%84%D9%84%D9%87.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">9</span>
+                            نصر الله
+                        </h3>
+                        <p class="story-description">قصص نصر الله للمؤمنين</p>
+                        <a href="https://www.mediafire.com/file/xct13o160rdqng1/15+-+%D9%86%D8%B5%D8%B1+%D8%A7%D9%84%D9%84%D9%87.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">10</span>
+                            عيسى في السماء
+                        </h3>
+                        <p class="story-description">قصة رفع سيدنا عيسى عليه السلام</p>
+                        <a href="https://www.mediafire.com/file/p4x1i163pxqv2hr/14+-+%D8%B9%D9%8A%D8%B3%D9%89+%D9%81%D9%8A+%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D8%A1.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">11</span>
+                            ابنتا عمران
+                        </h3>
+                        <p class="story-description">قصة ابنتي عمران عليهما السلام</p>
+                        <a href="https://www.mediafire.com/file/tqtp6uqjvyjxkbz/13+-+%D8%A7%D8%A8%D9%86%D8%AA%D8%A7+%D8%B9%D9%85%D8%B1%D8%A7%D9%86.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">12</span>
+                            قابيل وهابيل
+                        </h3>
+                        <p class="story-description">قصة أول جريمة قتل في التاريخ</p>
+                        <a href="https://www.mediafire.com/file/sx9y9nhixsv00a4/20+-+%D9%82%D8%A7%D8%A8%D9%8A%D9%84+%D9%88%D9%87%D8%A7%D8%A8%D9%8A%D9%84.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">13</span>
+                            الأرض المقدسة
+                        </h3>
+                        <p class="story-description">قصة الأرض المباركة</p>
+                        <a href="https://www.mediafire.com/file/4pzdjmsoqpmf20v/19+-+%D8%A7%D9%84%D8%A3%D8%B1%D8%B6+%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3%D8%A9.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">14</span>
+                            صلاة الحرب
+                        </h3>
+                        <p class="story-description">أحكام صلاة الخوف والقتال</p>
+                        <a href="https://www.mediafire.com/file/jrf9xrpq14zig1y/18+-+%D8%B5%D9%84%D8%A7%D8%A9+%D8%A7%D9%84%D8%AD%D8%B1%D8%A8.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">15</span>
+                            حياة الشهداء
+                        </h3>
+                        <p class="story-description">حقيقة حياة الشهداء عند ربهم</p>
+                        <a href="https://www.mediafire.com/file/r2pptrh27xk4irq/17+-+%D8%AD%D9%8A%D8%A7%D8%A9+%D8%A7%D9%84%D8%B4%D9%87%D8%AF%D8%A7%D8%A1.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">16</span>
+                            بنو آدم والشيطان
+                        </h3>
+                        <p class="story-description">صراع بني آدم مع الشيطان</p>
+                        <a href="https://www.mediafire.com/file/b5xe7ol3fbx3h5v/24+-+%D8%A8%D9%86%D9%88+%D8%A2%D8%AF%D9%85+%D9%88%D8%A7%D9%84%D8%B4%D9%8A%D8%B7%D8%A7%D9%86.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">17</span>
+                            إبراهيم يبحث عن الله
+                        </h3>
+                        <p class="story-description">رحلة سيدنا إبراهيم في البحث عن ربه</p>
+                        <a href="https://www.mediafire.com/file/vr7shnjwi1n7788/23+-+%D8%A5%D8%A8%D8%B1%D8%A7%D9%87%D9%8A%D9%85+%D9%8A%D8%A8%D8%AD%D8%AB+%D8%B9%D9%86+%D8%A7%D9%84%D9%84%D9%87.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">18</span>
+                            هل يستوي الأعمى والبصير
+                        </h3>
+                        <p class="story-description">مقارنة بين المؤمن والكافر</p>
+                        <a href="https://www.mediafire.com/file/avblqilfdp4iw1w/22+-+%D9%87%D9%84+%D9%8A%D8%B3%D8%AA%D9%88%D9%8A+%D8%A7%D9%84%D8%A3%D8%B9%D9%85%D9%89+%D9%88%D8%A7%D9%84%D8%A8%D8%B5%D9%8A%D8%B1.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">19</span>
+                            مائدة من السماء
+                        </h3>
+                        <p class="story-description">قصة المائدة التي أنزلها الله على الحواريين</p>
+                        <a href="https://www.mediafire.com/file/3d6gc5u6mb2094i/21+-+%D9%85%D8%A7%D8%A6%D8%AF%D8%A9+%D9%85%D9%86+%D8%A7%D9%84%D8%B3%D9%85%D8%A7%D8%A1.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">20</span>
+                            صالح عليه السلام وقومه
+                        </h3>
+                        <p class="story-description">قصة نبي الله صالح مع قومه ثمود</p>
+                        <a href="https://www.mediafire.com/file/2167ogizf5hntj5/28+-+%D8%B5%D8%A7%D9%84%D8%AD+%D8%B9%D9%84%D9%8A%D9%87+%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D9%88%D9%82%D9%88%D9%85%D9%87.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">21</span>
+                            نوح عليه السلام وقومه
+                        </h3>
+                        <p class="story-description">قصة نوح عليه السلام والطوفان</p>
+                        <a href="https://www.mediafire.com/file/g9wjslj0wuosl2v/26+-+%D9%86%D9%88%D8%AD+%D8%B9%D9%84%D9%8A%D9%87+%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D9%88%D9%82%D9%88%D9%85%D9%87.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">22</span>
+                            أصحاب الجنة والنار
+                        </h3>
+                        <p class="story-description">أوصاف أهل الجنة وأهل النار</p>
+                        <a href="https://www.mediafire.com/file/akfpf7xauu86vb4/25+-+%D8%A3%D8%B5%D8%AD%D8%A7%D8%A8+%D8%A7%D9%84%D8%AC%D9%86%D8%A9+%D9%88%D8%A3%D8%B5%D8%AD%D8%A7%D8%A8+%D8%A7%D9%84%D9%86%D8%A7%D8%B1.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">23</span>
+                            قوم موسى وفرعون
+                        </h3>
+                        <p class="story-description">قصة بني إسرائيل مع فرعون</p>
+                        <a href="https://www.mediafire.com/file/9ndbqzgpomatf0a/32+-+%D9%82%D9%88%D9%85+%D9%85%D9%88%D8%B3%D9%89+%D9%88%D9%82%D9%88%D9%85+%D9%81%D8%B1%D8%B9%D9%88%D9%86.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">24</span>
+                            موسى وفرعون والسحرة
+                        </h3>
+                        <p class="story-description">قصة مواجهة موسى لفرعون وسحرته</p>
+                        <a href="https://www.mediafire.com/file/v376b6t2c911qh1/31+-+%D9%85%D9%88%D8%B3%D9%89+%D8%B9%D9%84%D9%8A%D9%87+%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D9%88%D9%81%D8%B1%D8%B9%D9%88%D9%86+%D9%88%D8%A7%D9%84%D8%B3%D8%AD%D8%B1%D8%A9.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">25</span>
+                            شعيب عليه السلام وقومه
+                        </h3>
+                        <p class="story-description">قصة نبي الله شعيب مع قومه</p>
+                        <a href="https://www.mediafire.com/file/btz7ht0fhd3pdni/30+-+%D8%B4%D8%B9%D9%8A%D8%A8+%D8%B9%D9%84%D9%8A%D9%87+%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D9%88%D9%82%D9%88%D9%85%D9%87.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">26</span>
+                            لوط عليه السلام وقومه
+                        </h3>
+                        <p class="story-description">قصة نبي الله لوط مع قومه</p>
+                        <a href="https://www.mediafire.com/file/j1vhkz5j3uq6i3v/29+-+%D9%84%D9%88%D8%B7+%D8%B9%D9%84%D9%8A%D9%87+%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D9%88%D9%82%D9%88%D9%85%D9%87.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">27</span>
+                            موسى عليه السلام والأسياط
+                        </h3>
+                        <p class="story-description">قصة ابتلاء بني إسرائيل</p>
+                        <a href="https://www.mediafire.com/file/ictcz32ck4bmrfp/36+-+%D9%85%D9%88%D8%B3%D9%89+%D8%B9%D9%84%D9%8A%D9%87+%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D9%88%D8%A7%D9%84%D8%A3%D8%B3%D9%8A%D8%A7%D8%B7.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">28</span>
+                            قبلة المسلمين
+                        </h3>
+                        <p class="story-description">قصة تحويل القبلة من المسجد الأقصى إلى الكعبة</p>
+                        <a href="https://www.mediafire.com/file/1l7s0w2yzfv02da/7-+%D9%82%D8%A8%D9%84%D8%A9+%D8%A7%D9%84%D9%85%D8%B3%D9%84%D9%85%D9%8A%D9%86.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة 8 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">8</span>
+                            وقتالوا في سبيل الله
+                        </h3>
+                        <p class="story-description">آداب وأحكام الجهاد في سبيل الله</p>
+                        <a href="https://www.mediafire.com/file/eflijl5rxrkrerh/8-+%D9%88%D9%82%D8%A7%D8%AA%D9%84%D9%88%D8%A7+%D9%81%D9%8A+%D8%B3%D8%A8%D9%8A%D9%84+%D8%A7%D9%84%D9%84%D9%87.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة 9 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">9</span>
+                            قدرة الله
+                        </h3>
+                        <p class="story-description">مظاهر قدرة الله في الكون</p>
+                        <a href="https://www.mediafire.com/file/9vo5amkdis0xb8v/10-+%D9%82%D8%AF%D8%B1%D8%A9+%D8%A7%D9%84%D9%84%D9%87.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة 10 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">10</span>
+                            وإذ قالت الملائكة يا مريم
+                        </h3>
+                        <p class="story-description">قصة السيدة مريم عليها السلام</p>
+                        <a href="https://www.mediafire.com/file/it3mb3t2devnxz3/12-+%D9%88%D8%A5%D8%B0+..+%D9%82%D8%A7%D9%84%D8%AA+%D8%A7%D9%84%D9%85%D9%84%D8%A7%D8%A6%D9%83%D8%A9+%D9%8A%D8%A7+%D9%85%D8%B1%D9%8A%D9%85.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- القصص الجديدة -->
+            <div class="stories-grid">
+                <!-- قصة سفهاء بني إسرائيل -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">29</span>
+                            سفهاء بني إسرائيل
+                        </h3>
+                        <p class="story-description">قصة سفهاء بني إسرائيل وعصيانهم لأنبيائهم</p>
+                        <a href="https://www.mediafire.com/file/1dqiy307lnrgcih/35+-+%D8%B3%D9%81%D9%87%D8%A7%D8%A1+%D8%A8%D9%86%D9%89+%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة بنو إسرائيل عبدوا العجل -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">30</span>
+                            بنو إسرائيل عبدوا العجل
+                        </h3>
+                        <p class="story-description">قصة عبادة بني إسرائيل للعجل بعد خروجهم من مصر</p>
+                        <a href="https://www.mediafire.com/file/69lp2266crghqbd/34+-+%D8%A8%D9%86%D9%88+%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84+%D8%B9%D8%A8%D8%AF%D9%88%D8%A7+%D8%A7%D9%84%D8%B9%D8%AC%D9%84.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة موسى وبنو إسرائيل -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">31</span>
+                            موسى وبنو إسرائيل
+                        </h3>
+                        <p class="story-description">قصة سيدنا موسى مع بني إسرائيل في التيه</p>
+                        <a href="https://www.mediafire.com/file/1fzpawxh8syeiez/33+-+%D9%85%D9%88%D8%B3%D9%89+%D8%B9%D9%84%D9%8A%D9%87+%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D9%88%D8%A8%D9%86%D9%88+%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة توزيع الغنائم -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">32</span>
+                            توزيع الغنائم
+                        </h3>
+                        <p class="story-description">أحكام توزيع الغنائم في الإسلام</p>
+                        <a href="https://www.mediafire.com/file/3c192m3ne39mlys/40+-+%D8%AA%D9%88%D8%B2%D9%8A%D8%B9+%D8%A7%D9%84%D8%BA%D9%86%D8%A7%D8%A6%D9%85.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة وعد الله -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">33</span>
+                            وعد الله
+                        </h3>
+                        <p class="story-description">وعود الله للمؤمنين في القرآن الكريم</p>
+                        <a href="https://www.mediafire.com/file/zlpmo3r76k2yisb/39+-+%D9%88%D8%B9%D8%AF+%D8%A7%D9%84%D9%84%D9%87.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة دفاع عن الرسول -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">34</span>
+                            دفاع عن الرسول
+                        </h3>
+                        <p class="story-description">وجوب الدفاع عن رسول الله صلى الله عليه وسلم</p>
+                        <a href="https://www.mediafire.com/file/7iwmhfwppa8k1a5/38+-+%D8%AF%D9%81%D8%A7%D8%B9+%D8%B9%D9%86+%D8%A7%D9%84%D8%B1%D8%B3%D9%88%D9%84+%D8%B5%D9%84%D9%89+%D8%A7%D9%84%D9%84%D9%87+%D8%B9%D9%84%D9%8A%D9%87+%D9%88%D8%B3%D9%84%D9%85.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة ضحية الشيطان -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">35</span>
+                            ضحية الشيطان
+                        </h3>
+                        <p class="story-description">كيف يوقع الشيطان بالناس ويخدعهم</p>
+                        <a href="https://www.mediafire.com/file/fwgfcsxkixl39gx/37+-+%D8%B6%D8%AD%D9%8A%D8%A9+%D8%A7%D9%84%D8%B4%D9%8A%D8%B7%D8%A7%D9%86.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة يوم حنين -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">36</span>
+                            يوم حنين
+                        </h3>
+                        <p class="story-description">قصة غزوة حنين ودروسها العظيمة</p>
+                        <a href="http://www.mediafire.com/file/hjxhzzzt9pj3oe9/44_-_%2525D9%252588%2525D9%258A%2525D9%2585_%2525D8%2525AD%2525D9%252586%2525D9%258A%2525D9%2586.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة يوم الحج الأكبر -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">37</span>
+                            يوم الحج الأكبر
+                        </h3>
+                        <p class="story-description">قصة حجة الوداع ويوم عرفة</p>
+                        <a href="https://www.mediafire.com/file/t4ziplngmdpvjy8/43_-_%2525D9%252588%2525D9%258A%2525D9%2585_%2525D8%2525A7%2525D9%252584%2525D8%2525AD%2525D8%2525AC_%2525D8%2525A7%2525D9%252584%2525D8%2525A3%2525D9%252583%2525D8%2525A8%2525D8%2525B1.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة أسرى بدر -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">38</span>
+                            أسرى بدر
+                        </h3>
+                        <p class="story-description">قصة أسرى غزوة بدر والدروس المستفادة</p>
+                        <a href="http://www.mediafire.com/file/dx6w99hnabwbppv/42_-_%2525D8%2525A3%2525D8%2525B3%2525D8%2525B1%2525D9%252589_%2525D8%2525A8%2525D8%2525AF%2525D8%2525B1.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة قوة الصابرين -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">39</span>
+                            قوة الصابرين
+                        </h3>
+                        <p class="story-description">قصة الصبر وقوته في حياة المؤمن</p>
+                        <a href="http://www.mediafire.com/file/xlv27735tzcjd4p/41_-_%2525D9%252582%2525D9%252588%2525D8%2525A9_%2525D8%2525A7%2525D9%252584%2525D8%2525B5%2525D8%2525A7%2525D8%2525A8%2525D8%2525B1%2525D9%25258A%2525D9%252586.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة لا تحزن إن الله معنا -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">40</span>
+                            لا تحزن إن الله معنا
+                        </h3>
+                        <p class="story-description">موقف طلحة بن عبيد الله رضي الله عنه</p>
+                        <a href="http://www.mediafire.com/file/psk7h5ngo0anc4p/48_-_%2525D9%252584%2525D8%2525A7_%2525D8%2525AA%2525D8%2525AD%2525D8%2525B2%2525D9%252586_%2525D8%2525A5%2525D9%252586_%2525D8%2525A7%2525D9%252584%2525D9%2584%2525D9%2587_%2525D9%252585%2525D8%2525B9%2525D9%2586%2525D8%2525A7.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- المزيد من القصص -->
+            <div class="stories-grid">
+                <!-- قصة وإذ يمكر بك الذين كفروا -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">41</span>
+                            وإذ يمكر بك الذين كفروا
+                        </h3>
+                        <p class="story-description">قصة مكر الكفار بالنبي صلى الله عليه وسلم</p>
+                        <a href="http://www.mediafire.com/file/6dan7npump2h5ah/47_-_%2525D9%252588_%2525D8%2525A5%2525D8%2525B0_%2525D9%252585%2525D9%252583%2525D8%2525B1_%2525D8%2525A8%2525D9%252583_%2525D8%2525A7%2525D9%252584%2525D8%2525B0%2525D9%25258A%2525D9%252586_%2525D9%252583%2525D9%252581%2525D8%2525B1%2525D9%252588%2525D8%2525A7.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة الشهور العربية والأشهر الحرم -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">42</span>
+                            الشهور العربية والأشهر الحرم
+                        </h3>
+                        <p class="story-description">أهمية الشهور العربية والأشهر الحرم في الإسلام</p>
+                        <a href="http://www.mediafire.com/file/0nwwq47by2w05vl/46_-_%2525D8%2525A7%2525D9%252584%2525D8%2525B4%2525D9%252587%2525D9%252588%2525D8%2525B1_%2525D8%2525A7%2525D9%252584%2525D8%2525B9%2525D8%2525B1%2525D8%2525A8%2525D9%25258A%2525D8%2525A9_%2525D9%252588_%2525D8%2525A7%2525D9%252584%2525D8%2525A3%2525D8%2525B4%2525D9%252587%2525D8%2525B1_%2525D8%2525A7%2525D9%252584%2525D8%2525AD%2525D8%2525B1%2525D9%252585.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة عزير آية الله للناس -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">43</span>
+                            عزير آية الله للناس
+                        </h3>
+                        <p class="story-description">قصة نبي الله عزير عليه السلام</p>
+                        <a href="http://www.mediafire.com/file/okg7zv8tm2metl9/45_-_%2525D8%2525B9%2525D8%2525B2%2525D9%25258A%2525D8%2525B1_%2525D8%2525A3%2525D9%25258A%2525D8%2525A9_%2525D8%2525A7%2525D9%252584%2525D9%252584%2525D9%252587_%2525D9%252584%2525D9%252584%2525D9%252586%2525D8%2525A7%2525D8%2525B3.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة المسلمون في ساعة العسرة -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">44</span>
+                            المسلمون في ساعة العسرة
+                        </h3>
+                        <p class="story-description">أحوال المسلمين في أوقات الشدة والضيق</p>
+                        <a href="https://www.mediafire.com/file/q6xybdlyhoy0d0s/52_-_%2525D8%2525A7%2525D9%252584%2525D9%252585%2525D8%2525B3%2525D9%252584%2525D9%252585%2525D9%252588%2525D9%252586_%2525D9%252581%2525D9%252589_%2525D8%2525B3%2525D8%2525A7%2525D8%2525B9%2525D8%2525A9_%2525D8%2525A7%2525D9%252584%2525D8%2525B9%2525D8%2525B3%2525D8%2525B1%2525D8%2525A9.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة مسجد التقوى ومسجد الضرار -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">45</span>
+                            مسجد التقوى ومسجد الضرار
+                        </h3>
+                        <p class="story-description">قصة بني غنم وبناء مسجد الضرار</p>
+                        <a href="https://www.mediafire.com/file/v3lq9zfuymyig61/51_-_%2525D9%252585%2525D8%2525B3%2525D8%2525AC%2525D8%2525AF_%2525D8%2525A7%2525D9%252584%2525D8%2525AA%2525D9%252582%2525D9%252588%2525D9%252589_%2525D9%252588_%2525D9%252585%2525D8%2525B3%2525D8%2525AC%2525D8%2525AF_%2525D8%2525A7%2525D9%252584%2525D8%2525B6%2525D8%2525B1%2525D8%2525A7%2525D8%2525B1.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة خذ من أموالهم صدقة -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">46</span>
+                            خذ من أموالهم صدقة
+                        </h3>
+                        <p class="story-description">أحكام الزكاة والصدقات في الإسلام</p>
+                        <a href="http://www.mediafire.com/file/v6vg8r007mxrxa3/50_-_%2525D8%2525AE%2525D8%2525B0_%2525D9%252585%2525D9%252586_%2525D8%2525A3%2525D9%252585%2525D9%252588%2525D8%2525A7%2525D9%252584%2525D9%252587%2525D9%252585_%2525D8%2525B5%2525D8%2525AF%2525D9%252582%2525D8%2525A9.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة وجاوزنا ببني إسرائيل البحر -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">47</span>
+                            وجاوزنا ببني إسرائيل البحر
+                        </h3>
+                        <p class="story-description">معجزة انشقاق البحر لسيدنا موسى</p>
+                        <a href="https://www.mediafire.com/file/lgmvitslsdnqtcp/56%2B-%2B%2525D9%252588%2525D8%2525AC%2525D8%2525A7%2525D9%252588%2525D8%2525B2%2525D9%252586%2525D8%2525A7%2B%2525D8%2525A8%2525D8%2525A8%2525D9%252586%2525D9%25258A%2B%2525D8%2525A5%2525D8%2525B3%2525D8%2525B1%2525D8%2525A7%2525D8%2525A6%2525D9%25258A%2525D9%2584%2B%2525D8%2525A7%2525D9%252584%2525D8%2525A8%2525D8%2525AD%2525D8%2525B1.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة القرآن يتحدى -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">48</span>
+                            القرآن يتحدى
+                        </h3>
+                        <p class="story-description">إعجاز القرآن الكريم وتحديه للبشر</p>
+                        <a href="http://www.mediafire.com/file/spka4ka0c3ei4al/55_-_%2525D8%2525A7%2525D9%252584%2525D9%252582%2525D8%2525B1%2525D8%2525A2%2525D9%252586_%2525D9%25258A%2525D8%2525AA%2525D8%2525AD%2525D8%2525AF%2525D9%252589.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة والله يعصمك من الناس -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">49</span>
+                            والله يعصمك من الناس
+                        </h3>
+                        <p class="story-description">حفظ الله لنبيه صلى الله عليه وسلم</p>
+                        <a href="http://www.mediafire.com/file/7pakcyd4mdh1lrw/54_-_%2525D9%252588_%2525D8%2525A7%2525D9%252584%2525D9%252584%2525D9%252587_%2525D9%25258A%2525D8%2525B9%2525D8%2525B5%2525D9%252585%2525D9%252583_%2525D9%252585%2525D9%252586_%2525D8%2525A7%2525D9%252584%2525D9%252586%2525D8%2525A7%2525D8%2525B3.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة الثلاثة الذين خلفوا -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">50</span>
+                            الثلاثة الذين خلفوا
+                        </h3>
+                        <p class="story-description">قصة كعب بن مالك وصاحبيه رضي الله عنهم</p>
+                        <a href="http://www.mediafire.com/file/19janmd2v1as5gc/53_-_%2525D8%2525A7%2525D9%252584%2525D8%2525AB%2525D9%252584%2525D8%2525A7%2525D8%2525AB%2525D8%2525A9_%2525D8%2525A7%2525D9%252584%2525D8%2525B0%2525D9%25258A%2525D9%252588_%2525D8%2525AE%2525D9%252584%2525D9%252581%2525D9%252588%2525D8%2525A7.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة سر قميص يوسف -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">51</span>
+                            سر قميص يوسف
+                        </h3>
+                        <p class="story-description">قصة يوسف عليه السلام وبراءة ساحرته</p>
+                        <a href="https://www.mediafire.com/file/x3ytqk0mmhc6cfp/60%2B-%2B%2525D8%2525B3%2525D8%2525B1%2B%2525D9%252582%2525D9%252585%2525D9%25258A%2525D8%2525B5%2B%2525D9%25258A%2525D9%252588%2525D8%2525B3%2525D9%2581.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- المزيد من القصص -->
+            <div class="stories-grid">
+                <!-- قصة يوسف عليه السلام السجين المظلوم -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">52</span>
+                            يوسف عليه السلام السجين المظلوم
+                        </h3>
+                        <p class="story-description">قصة يوسف عليه السلام في السجن</p>
+                        <a href="http://www.mediafire.com/file/zjxes9gr545uw23/59_-_%2525D9%252588%2525D8%2525B3%2525D9%252581_%2525D8%2525B9%2525D9%252584%2525D9%25258A%2525D9%252587_%2525D8%2525A7%2525D9%252584%2525D8%2525B3%2525D9%252584%2525D8%2525A7%2525D9%252585_%2525D8%2525A7%2525D9%252584%2525D8%2525B3%2525D8%2525AC%2525D9%25258A%2525D9%252586_%2525D8%2525A7%2525D9%252584%2525D9%252585%2525D8%2525B8%2525D9%252584%2525D9%252588%2525D9%252585.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة يوسف عليه السلام في غيابة الجب -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">53</span>
+                            يوسف عليه السلام في غيابة الجب
+                        </h3>
+                        <p class="story-description">قصة إلقاء يوسف في الجب</p>
+                        <a href="http://www.mediafire.com/file/wuglt0mfxiqydaw/58_-_%2525D9%252588%2525D8%2525B3%2525D9%252581_%2525D8%2525B9%2525D9%252584%2525D9%25258A%2525D9%252587_%2525D8%2525A7%2525D9%252584%2525D8%2525B3%2525D9%252584%2525D8%2525A7%2525D9%252585_%2525D9%252581%2525D9%252589_%2525D8%2525BA%2525D9%25258A%2525D8%2525A7%2525D8%2525A8%2525D8%2525A9_%2525D8%2525A7%2525D9%252584%2525D8%2525AC%2525D8%2525A8.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة يا بني اركب معنا -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">54</span>
+                            يا بني اركب معنا
+                        </h3>
+                        <p class="story-description">قصة نوح عليه السلام مع ابنه</p>
+                        <a href="http://www.mediafire.com/file/mabfptxxspzb69z/57_-_%2525D9%25258A%2525D8%2525A7_%2525D8%2525A8%2525D9%252586%2525D9%252589_%2525D8%2525A7%2525D8%2525B1%2525D9%252583%2525D8%2525A8_%2525D9%252585%2525D8%2525B9%2525D9%252586%2525D8%2525A7.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة زمزم نبع الأنبياء -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">55</span>
+                            زمزم نبع الأنبياء
+                        </h3>
+                        <p class="story-description">قصة ماء زمزم وبركته</p>
+                        <a href="https://www.mediafire.com/file/hyqzqonwo1marec/64%2B-%2B%2525D8%2525B2%2525D9%252585%2525D8%2525B2%2525D9%252585%2B%2525D9%252586%2525D8%2525A8%2525D8%2525B9%2B%2525D8%2525A7%2525D9%252584%2525D8%2525A3%2525D9%252586%2525D8%2525A8%2525D9%25258A%2525D8%2525A7%2525D8%2525A1.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة حتى يغيروا ما بأنفسهم -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">56</span>
+                            حتى يغيروا ما بأنفسهم
+                        </h3>
+                        <p class="story-description">قانون التغيير في القرآن الكريم</p>
+                        <a href="http://www.mediafire.com/file/u12oezcljoeddjq/63_-_%2525D8%2525AD%2525D8%2525AA%2525D9%252589_%2525D9%25258A%2525D8%2525BA%2525D9%25258A%2525D8%2525B1%2525D9%252588%2525D8%2525A7_%2525D9%252585%2525D8%2525A7_%2525D8%2525A8%2525D8%2525A3%2525D9%252586%2525D9%252581%2525D8%2525B3%2525D9%252587%2525D9%252585.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة ثم استوى على العرش -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">57</span>
+                            ثم استوى على العرش
+                        </h3>
+                        <p class="story-description">صفات الله تعالى في القرآن</p>
+                        <a href="https://www.mediafire.com/file/i7lsiya7aquo72i/62%2B-%2B%2525D8%2525AB%2525D9%252585%2B%2525D8%2525A7%2525D8%2525B3%2525D8%2525AA%2525D9%252588%2525D9%252589%2B%2525D8%2525B9%2525D9%252584%2525D9%252589%2B%2525D8%2525A7%2525D9%252584%2525D8%2525B9%2525D8%2525B1%2525D8%2525B4.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة لقاء الأحبة -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">58</span>
+                            لقاء الأحبة
+                        </h3>
+                        <p class="story-description">قصة لقاء سيدنا يعقوب بيوسف عليهما السلام</p>
+                        <a href="http://www.mediafire.com/file/qpc1j4ia2qhjdgs/61_-_%2525D9%252584%2525D9%252582%2525D8%2525A7%2525D8%2525A1_%2525D8%2525A7%2525D9%252584%2525D8%2525A3%2525D8%2525AD%2525D8%2525A8%2525D8%2525A9.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة فاصدع بما تؤمر -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">59</span>
+                            فاصدع بما تؤمر
+                        </h3>
+                        <p class="story-description">قصة الدعوة إلى الله</p>
+                        <a href="http://www.mediafire.com/file/ctt426ki1h4g88f/68_-_%2525D9%252581%2525D8%2525A7%2525D8%2525B5%2525D8%2525AF%2525D8%2525B9_%2525D8%2525A8%2525D9%252585%2525D8%2525A7_%2525D8%2525AA%2525D8%2525A4%2525D9%252585%2525D8%2525B1.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة أصحاب الأيكة -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">60</span>
+                            أصحاب الأيكة
+                        </h3>
+                        <p class="story-description">قصة قوم شعيب عليه السلام</p>
+                        <a href="https://www.mediafire.com/file/gwtokpf1a3x553v/67%2B-%2B%2525D8%2525A3%2525D8%2525B5%2525D8%2525AD%2525D8%2525A7%2525D8%2525A8%2B%2525D8%2525A7%2525D9%252584%2525D8%2525A3%2525D9%25258A%2525D9%252583%2525D8%2525A9.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة ونبئهم عن ضيف إبراهيم -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">61</span>
+                            ونبئهم عن ضيف إبراهيم
+                        </h3>
+                        <p class="story-description">قصة ضيوف إبراهيم عليه السلام</p>
+                        <a href="https://www.mediafire.com/file/lzfjkp06v8dk4sl/66_-_%2525D9%252588%2525D9%252586%2525D8%2525A8%2525D8%2525A6%2525D9%252587%2525D9%252585_%2525D8%2525B9%2525D9%252586_%2525D8%2525B6%2525D9%25258A%2525D9%252581_%2525D8%2525A5%2525D8%2525A8%2525D8%2525B1%2525D8%2525A7%2525D9%252587%2525D9%25258A%2525D9%252585.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة مقام إبراهيم مصلي -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">62</span>
+                            مقام إبراهيم مصلي
+                        </h3>
+                        <p class="story-description">قصة مقام إبراهيم عليه السلام</p>
+                        <a href="https://www.mediafire.com/file/orp5p4xt1mwjseo/65_-_%2525D9%252585%2525D9%252582%2525D8%2525A7%2525D9%252585_%2525D8%2525A5%2525D8%2525A8%2525D8%2525B1%2525D8%2525A7%2525D9%252587%2525D9%25258A%2525D9%252585_%2525D9%252585%2525D8%2525B5%2525D9%252584%2525D9%25258A.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة التي نقضت غزلها -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">63</span>
+                            التي نقضت غزلها
+                        </h3>
+                        <p class="story-description">قصة المرأة التي كانت تنقض غزلها</p>
+                        <a href="http://www.mediafire.com/file/i7ky6vmebtjig1y/72_-_%2525D8%2525A7%2525D9%252584%2525D8%2525AA%2525D9%25258A_%2525D9%252586%2525D9%252582%2525D8%2525B6%2525D8%2525AA_%2525D8%2525BA%2525D8%2525B2%2525D9%252584%2525D9%252587%2525D8%2525A7.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة رياحين البيوت شقائق الرجال -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">64</span>
+                            رياحين البيوت شقائق الرجال
+                        </h3>
+                        <p class="story-description">دور المرأة في المجتمع الإسلامي</p>
+                        <a href="http://www.mediafire.com/file/0re3kpei4vu9vbn/71_-_%2525D8%2525B1%2525D9%25258A%2525D8%2525A7%2525D8%2525AD%2525D9%25258A%2525D9%252586_%2525D8%2525A7%2525D9%252584%2525D8%2525A8%2525D9%25258A%2525D9%252588%2525D8%2525AA_%2525D8%2525B4%2525D9%252582%2525D8%2525A7%2525D8%2525A6%2525D9%252582_%2525D8%2525A7%2525D9%252584%2525D8%2525B1%2525D8%2525AC%2525D8%2525A7%2525D9%252584.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة وعلامات وبالنجم هم يهتدون -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">65</span>
+                            وعلامات وبالنجم هم يهتدون
+                        </h3>
+                        <p class="story-description">الهداية في القرآن الكريم</p>
+                        <a href="http://www.mediafire.com/file/7s9gndhmfk1p2w5/70_-_%2525D9%252588_%2525D8%2525B9%2525D9%252584%2525D8%2525A7%2525D9%252585%2525D8%2525A7%2525D8%2525AA_%2525D9%252588_%2525D8%2525A8%2525D8%2525A7%2525D9%252584%2525D9%252586%2525D8%2525AC%2525D9%252585_%2525D9%252587%2525D9%252585_%2525D9%25258A%2525D9%252587%2525D8%2525AA%2525D8%2525AF%2525D9%252588%2525D9%252586.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة ويخلق ما لا تعلمون -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">66</span>
+                            ويخلق ما لا تعلمون
+                        </h3>
+                        <p class="story-description">عجائب خلق الله تعالى</p>
+                        <a href="http://www.mediafire.com/file/h7snal278j5qoxz/69_-_%2525D9%252588_%2525D9%25258A%2525D8%2525AE%2525D9%252584%2525D9%252582_%2525D9%252585%2525D8%2525A7_%2525D9%252584%2525D8%2525A7_%2525D8%2525AA%2525D8%2525B9%2525D9%252584%2525D9%252585%2525D9%252588%2525D9%252586.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة موسى عليه السلام والعبد الصالح -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">67</span>
+                            موسى عليه السلام والعبد الصالح
+                        </h3>
+                        <p class="story-description">قصة موسى مع الخضر عليهما السلام</p>
+                        <a href="http://www.mediafire.com/file/v9zll1xyexddne8/76_-_%2525D9%252585%2525D9%252588%2525D8%2525B3%2525D9%252589_%2525D8%2525B9%2525D9%252584%2525D9%25258A%2525D9%252587_%2525D8%2525A7%2525D9%252584%2525D8%2525B3%2525D9%252584%2525D8%2525A7%2525D9%252585_%2525D9%252588_%2525D8%2525A7%2525D9%252584%2525D8%2525B9%2525D8%2525A8%2525D8%2525AF_%2525D8%2525A7%2525D9%252584%2525D8%2525B5%2525D8%2525A7%2525D9%252584%2525D8%2525AD.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة صاحب الجنتين -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">68</span>
+                            صاحب الجنتين
+                        </h3>
+                        <p class="story-description">قصة الرجل الذي آتاه الله جنتين</p>
+                        <a href="http://www.mediafire.com/file/22u4n9cf49ugioh/75_-_%2525D8%2525B5%2525D8%2525A7%2525D8%2525AD%2525D8%2525A8_%2525D8%2525A7%2525D9%252584%2525D8%2525AC%2525D9%252586%2525D8%2525AA%2525D9%25258A%2525D9%252586.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة فتية آمنوا بربهم -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">69</span>
+                            فتية آمنوا بربهم
+                        </h3>
+                        <p class="story-description">قصة أصحاب الكهف</p>
+                        <a href="https://www.mediafire.com/file/82k74gqgguxt7u1/74_-_%2525D9%252581%2525D8%2525AA%2525D9%25258A%2525D8%2525A9_%2525D8%2525A2%2525D9%252585%2525D9%252586%2525D9%252588%2525D8%2525A7_%2525D8%2525A8%2525D8%2525B1%2525D8%2525A8%2525D9%252587%2525D9%252585.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة سبحان الذي أسرى بعبده -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">70</span>
+                            سبحان الذي أسرى بعبده
+                        </h3>
+                        <p class="story-description">قصة الإسراء والمعراج</p>
+                        <a href="http://www.mediafire.com/file/ir30hlv44qecrju/73_-_%2525D8%2525B3%2525D8%2525A8%2525D8%2525AD%2525D8%2525A7%2525D9%252586_%2525D8%2525A7%2525D9%252584%2525D8%2525B0%2525D9%25258A_%2525D8%2525A3%2525D8%2525B3%2525D8%2525B1%2525D9%252589_%2525D8%2525A8%2525D8%2525B9%2525D8%2525A8%2525D8%2525AF%2525D9%252587.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- المزيد من القصص -->
+            <div class="stories-grid">
+                <!-- قصة ذلك عيسى ابن مريم -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">71</span>
+                            ذلك عيسى ابن مريم
+                        </h3>
+                        <p class="story-description">قصة سيدنا عيسى عليه السلام</p>
+                        <a href="http://www.mediafire.com/file/4w7absnefzp949g/80_-_%2525D8%2525B0%2525D9%252584%2525D9%252583_%2525D8%2525B9%2525D9%25258A%2525D8%2525B3%2525D9%252589_%2525D8%2525A7%2525D8%2525A8%2525D9%252586_%2525D9%252585%2525D8%2525B1%2525D9%25258A%2525D9%252585.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة واذكر في الكتاب مريم -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">72</span>
+                            واذكر في الكتاب مريم
+                        </h3>
+                        <p class="story-description">قصة السيدة مريم عليها السلام</p>
+                        <a href="http://www.mediafire.com/file/0tja9esjdr81jje/79_-_%2525D9%252588_%2525D8%2525A7%2525D8%2525B0%2525D9%252583%2525D8%2525B1_%2525D9%252581%2525D9%25258A_%2525D8%2525A7%2525D9%252584%2525D9%252583%2525D8%2525AA%2525D8%2525A7%2525D8%2525A8_%2525D9%252585%2525D8%2525B1%2525D9%25258A%2525D9%252585.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة يا يحيى خذ الكتاب بقوة -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">73</span>
+                            يا يحيى خذ الكتاب بقوة
+                        </h3>
+                        <p class="story-description">قصة سيدنا يحيى عليه السلام</p>
+                        <a href="https://www.mediafire.com/file/igbab3y3wpusa7u/78%2B-%2B%2525D9%25258A%2525D8%2525A7%2B%2525D9%25258A%2525D8%2525AD%2525D9%25258A%2525D9%252589%2B%2525D8%2525AE%2525D8%2525B0%2B%2525D8%2525A7%2525D9%252584%2525D9%252583%2525D8%2525AA%2525D8%2525A7%2525D8%2525A8%2B%2525D8%2525A8%2525D9%252582%2525D9%252588%2525D8%2525A9.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة ذو القرنين -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">74</span>
+                            ذو القرنين
+                        </h3>
+                        <p class="story-description">قصة الملك الصالح ذي القرنين</p>
+                        <a href="https://www.mediafire.com/file/jltcppxdgkbvwui/77%2B-%2B%2525D8%2525B0%2525D9%252588%2B%2525D8%2525A7%2525D9%252584%2525D9%252582%2525D8%2525B1%2525D9%252586%2525D9%25258A%2525D9%252586.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة الوادي المقدس طوى -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">75</span>
+                            الوادي المقدس طوى
+                        </h3>
+                        <p class="story-description">قصة تكليم الله لموسى عليه السلام</p>
+                        <a href="https://www.mediafire.com/file/jbxja4tgabmxkt7/84%2B-%2B%2525D8%2525A7%2525D9%252584%2525D9%252588%2525D8%2525A7%2525D8%2525AF%2525D9%25258A%2B%2525D8%2525A7%2525D9%252584%2525D9%252585%2525D9%252582%2525D8%2525AF%2525D8%2525B3%2B%2525D8%2525B7%2525D9%252588%2525D9%252589.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة وكلهم آتيه يوم القيامة فردا -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">76</span>
+                            وكلهم آتيه يوم القيامة فردا
+                        </h3>
+                        <p class="story-description">أهوال يوم القيامة</p>
+                        <a href="https://www.mediafire.com/file/9l68ui4e1trpuz0/83%2B-%2B%2525D9%252588%2525D9%252583%2525D9%252584%2525D9%252587%2525D9%252585%2B%2525D8%2525A2%2525D8%2525AA%2525D9%25258A%2525D9%252587%2B%2525D9%25258A%2525D9%252588%2525D9%252585%2B%2525D8%2525A7%2525D9%252584%2525D9%252582%2525D9%25258A%2525D8%2525A7%2525D9%252585%2525D8%2525A9%2B%2525D9%252581%2525D8%2525B1%2525D8%2525AF%2525D8%2525A7.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة واذكر في الكتاب إدريس -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">77</span>
+                            واذكر في الكتاب إدريس
+                        </h3>
+                        <p class="story-description">قصة نبي الله إدريس عليه السلام</p>
+                        <a href="https://www.mediafire.com/file/x56jlltaoc9zm7s/82%2B-%2B%2525D9%252588%2525D8%2525A7%2525D8%2525B0%2525D9%252583%2525D8%2525B1%2B%2525D9%252581%2525D9%25258A%2B%2525D8%2525A7%2525D9%252584%2525D9%252583%2525D8%2525AA%2525D8%2525A7%2525D8%2525A8%2B%2525D8%2525A5%2525D8%2525AF%2525D8%2525B1%2525D9%25258A%2525D8%2525B3.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة واذكر في الكتاب إسماعيل -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">78</span>
+                            واذكر في الكتاب إسماعيل
+                        </h3>
+                        <p class="story-description">قصة سيدنا إسماعيل عليه السلام</p>
+                        <a href="https://www.mediafire.com/file/759i5axgxwv8b9w/81%2B-%2B%2525D9%252588%2525D8%2525A7%2525D8%2525B0%2525D9%252583%2525D8%2525B1%2B%2525D9%252581%2525D9%25258A%2B%2525D8%2525A7%2525D9%252584%2525D9%252583%2525D8%2525AA%2525D8%2525A7%2525D8%2525A8%2B%2525D8%2525A5%2525D8%2525B3%2525D9%252585%2525D8%2525A7%2525D8%2525B9%2525D9%25258A%2525D9%252584.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة وأيوب إذ نادى ربه -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">79</span>
+                            وأيوب إذ نادى ربه
+                        </h3>
+                        <p class="story-description">قصة نبي الله أيوب عليه السلام</p>
+                        <a href="https://www.mediafire.com/file/yw9rjf845ljo9yz/88%2B-%2B%2525D9%252588%2525D8%2525A3%2525D9%25258A%2525D9%252588%2525D8%2525A8%2B%2525D8%2525A5%2525D8%2525B0%2B%2525D9%252586%2525D8%2525A7%2525D8%2525AF%2525D9%252589%2B%2525D8%2525B1%2525D8%2525A8%2525D9%252587.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة حكمة سليمان عليه السلام -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">80</span>
+                            حكمة سليمان عليه السلام
+                        </h3>
+                        <p class="story-description">حكمة وقصص نبي الله سليمان</p>
+                        <a href="https://www.mediafire.com/file/s3liqoggvgpja2s/87%2B-%2B%2525D8%2525AD%2525D9%252583%2525D9%252585%2525D8%2525A9%2B%2525D8%2525B3%2525D9%252584%2525D9%25258A%2525D9%252585%2525D8%2525A7%2525D9%252586%2B%2525D8%2525B9%2525D9%252584%2525D9%25258A%2525D9%252587%2B%2525D8%2525A7%2525D9%252584%2525D8%2525B3%2525D9%252584%2525D8%2525A7%2525D9%252585.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة النار بردا وسلاما -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">81</span>
+                            النار بردا وسلاما
+                        </h3>
+                        <p class="story-description">قصة إبراهيم عليه السلام في النار</p>
+                        <a href="https://www.mediafire.com/file/mrpoiq8n9ju1g09/86%2B-%2B%2525D8%2525A7%2525D9%252584%2525D9%252586%2525D8%2525A7%2525D8%2525B1%2B%2525D8%2525A8%2525D8%2525B1%2525D8%2525AF%2525D8%2525A7%2B%2525D9%252588%2525D8%2525B3%2525D9%252584%2525D8%2525A7%2525D9%252585%2525D8%2525A7.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة وجعلنا من الماء كل شيء حي -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">82</span>
+                            وجعلنا من الماء كل شيء حي
+                        </h3>
+                        <p class="story-description">أسرار خلق الله في الماء</p>
+                        <a href="https://www.mediafire.com/file/5odji32fq00qpcm/85%2B-%2B%2525D9%252588%2525D8%2525AC%2525D8%2525B9%2525D9%252584%2525D9%252586%2525D8%2525A7%2B%2525D9%252585%2525D9%252586%2B%2525D8%2525A7%2525D9%252584%2525D9%252585%2525D8%2525A7%2525D8%2525A1%2B%2525D9%252583%2525D9%252584%2B%2525D8%2525B4%2525D9%25258A%2525D8%2525A1%2B%2525D8%2525AD%2525D9%25258A.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- المزيد من القصص -->
+            <div class="stories-grid">
+                <!-- قصة وما خلقت الجن والإنس إلا ليعبدون -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">83</span>
+                            وما خلقت الجن والإنس إلا ليعبدون
+                        </h3>
+                        <p class="story-description">حكمة خلق الإنسان والجن</p>
+                        <a href="https://www.mediafire.com/file/example1.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة وإنك لعلى خلق عظيم -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">84</span>
+                            وإنك لعلى خلق عظيم
+                        </h3>
+                        <p class="story-description">أخلاق النبي محمد ﷺ</p>
+                        <a href="https://www.mediafire.com/file/example2.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة وما أرسلناك إلا رحمة للعالمين -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">85</span>
+                            وما أرسلناك إلا رحمة للعالمين
+                        </h3>
+                        <p class="story-description">رحمة النبي ﷺ بالخلق</p>
+                        <a href="https://www.mediafire.com/file/example3.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة إنما يخشى الله من عباده العلماء -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">86</span>
+                            إنما يخشى الله من عباده العلماء
+                        </h3>
+                        <p class="story-description">فضل العلم والعلماء</p>
+                        <a href="https://www.mediafire.com/file/example4.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة وقل ربي زدني علما -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">87</span>
+                            وقل ربي زدني علما
+                        </h3>
+                        <p class="story-description">أهمية طلب العلم</p>
+                        <a href="https://www.mediafire.com/file/example5.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة واذكر ربك إذا نسيت -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">88</span>
+                            واذكر ربك إذا نسيت
+                        </h3>
+                        <p class="story-description">آداب الذكر والدعاء</p>
+                        <a href="https://www.mediafire.com/file/example6.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة والعصر إن الإنسان لفي خسر -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">89</span>
+                            والعصر إن الإنسان لفي خسر
+                        </h3>
+                        <p class="story-description">قيمة الوقت في حياة المسلم</p>
+                        <a href="https://www.mediafire.com/file/example7.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة إن مع العسر يسرا -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">90</span>
+                            إن مع العسر يسرا
+                        </h3>
+                        <p class="story-description">الفرج بعد الشدة</p>
+                        <a href="https://www.mediafire.com/file/example8.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة فإن مع العسر يسرا -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">91</span>
+                            فإن مع العسر يسرا
+                        </h3>
+                        <p class="story-description">التبشير بالفرج</p>
+                        <a href="https://www.mediafire.com/file/example9.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- قصة إنما المؤمنون إخوة -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">92</span>
+                            إنما المؤمنون إخوة
+                        </h3>
+                        <p class="story-description">حقوق الأخوة في الإسلام</p>
+                        <a href="https://www.mediafire.com/file/example10.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- المزيد من القصص -->
+            <div class="stories-grid">
+                <!-- قصة قارون وعاقبة المفسدين -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">93</span>
+                            قارون وعاقبة المفسدين
+                        </h3>
+                        <p class="story-description">قصة قارون وعاقبة الطغيان</p>
+                        <a href="https://www.mediafire.com/file/es2a2kk249gm0fb/92-+%D9%82%D8%A7%D8%B1%D9%88%D9%86+%D9%88%D8%B9%D8%A7%D9%82%D8%A8%D8%A9+%D8%A7%D9%84%D9%85%D9%81%D8%B3%D8%AF%D9%8A%D9%86.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة موسى عليه السلام القوي الأمين -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">94</span>
+                            موسى عليه السلام القوي الأمين
+                        </h3>
+                        <p class="story-description">قصة سيدنا موسى عليه السلام</p>
+                        <a href="https://www.mediafire.com/file/e2s24t4oausm0j0/91-+%D9%85%D9%88%D8%B3%D9%89+%D8%B9%D9%84%D9%8A%D9%87+%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D8%A7%D9%84%D9%82%D9%88%D9%8A+%D8%A7%D9%84%D8%A3%D9%85%D9%8A%D9%86.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة سليمان عليه السلام وملكة سبأ -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">95</span>
+                            سليمان عليه السلام وملكة سبأ
+                        </h3>
+                        <p class="story-description">قصة نبي الله سليمان مع ملكة سبأ</p>
+                        <a href="https://www.mediafire.com/file/h3958qezdan74do/90-+%D8%B3%D9%84%D9%8A%D9%85%D8%A7%D9%86+%D8%B9%D9%84%D9%8A%D9%87+%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D9%88%D9%85%D9%84%D9%83%D8%A9+%D8%B3%D8%A8%D8%A3.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة يونس عليه السلام في بطن الحوت -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">96</span>
+                            يونس عليه السلام في بطن الحوت
+                        </h3>
+                        <p class="story-description">قصة سيدنا يونس في بطن الحوت</p>
+                        <a href="https://www.mediafire.com/file/htaidii6aez1ugz/89-+%D9%8A%D9%88%D9%86%D8%B3+%D8%B9%D9%84%D9%8A%D9%87+%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D9%81%D9%8A+%D8%A8%D8%B7%D9%86+%D8%A7%D9%84%D8%AD%D9%88%D8%AA.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة وفديناه بذبح عظيم -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">97</span>
+                            وفديناه بذبح عظيم
+                        </h3>
+                        <p class="story-description">قصة سيدنا إبراهيم وابنه إسماعيل</p>
+                        <a href="https://www.mediafire.com/file/k3l4ifnc4au29dx/96-+%D9%88%D9%81%D8%AF%D9%8A%D9%86%D8%A7%D9%87+%D8%A8%D8%B0%D8%A8%D8%AD+%D8%B9%D8%B8%D9%8A%D9%85.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة جنات سبأ وجزاء الكفور -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">98</span>
+                            جنات سبأ وجزاء الكفور
+                        </h3>
+                        <p class="story-description">قصة قوم سبأ وعاقبة الكفران</p>
+                        <a href="https://www.mediafire.com/file/h3lwgy9eed2970i/95-+%D8%AC%D9%86%D8%A7%D8%AA+%D8%B3%D8%A8%D8%A3+%D9%88%D8%AC%D8%B2%D8%A7%D8%A1+%D8%A7%D9%84%D9%83%D9%81%D9%88%D8%B1.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة في بيت النبي صلى الله عليه وسلم -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">99</span>
+                            في بيت النبي صلى الله عليه وسلم
+                        </h3>
+                        <p class="story-description">حياة النبي في بيته الشريف</p>
+                        <a href="https://www.mediafire.com/file/lkabga6ynh77maz/94-+%D9%81%D9%8A+%D8%A8%D9%8A%D8%AA+%D8%A7%D9%84%D9%86%D8%A8%D9%8A+%D8%B5%D9%84%D9%89+%D8%A7%D9%84%D9%84%D9%87+%D8%B9%D9%84%D9%8A%D9%87+%D9%88%D8%B3%D9%84%D9%85.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة زيد .. هو ابن حارثة -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">100</span>
+                            زيد .. هو ابن حارثة
+                        </h3>
+                        <p class="story-description">قصة زيد بن حارثة رضي الله عنه</p>
+                        <a href="https://www.mediafire.com/file/zi3j76nx9zq2uf6/93-+%D8%B2%D9%8A%D8%AF+..+%D9%87%D9%88+%D8%A7%D8%A8%D9%86+%D8%AD%D8%A7%D8%B1%D8%AB%D8%A9.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة للبيت رب يحميه -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">101</span>
+                            للبيت رب يحميه
+                        </h3>
+                        <p class="story-description">حماية الله لبيته الحرام</p>
+                        <a href="https://www.mediafire.com/file/s2k2x0x5d4nfq5f/100-+%D9%84%D9%84%D8%A8%D9%8A%D8%AA+%D8%B1%D8%A8+%D9%8A%D8%AD%D9%85%D9%8A%D9%87.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة أصحاب الأخدود والثابتون على الإيمان -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">102</span>
+                            أصحاب الأخدود والثابتون على الإيمان
+                        </h3>
+                        <p class="story-description">قصة إيمان الثابتين على الحق</p>
+                        <a href="https://www.mediafire.com/file/tjnaucq6ruw0mea/99-+%D8%A3%D8%B5%D8%AD%D8%A7%D8%A8+%D8%A7%D9%84%D8%A3%D8%AE%D8%AF%D9%88%D8%AF+%D9%88%D8%A7%D9%84%D8%AB%D8%A7%D8%A8%D8%AA%D9%88%D9%86+%D8%B9%D9%84%D9%89+%D8%A7%D9%84%D8%A5%D9%8A%D9%85%D8%A7%D9%86.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قصة جنة الدنيا ومتاع الغرور -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">103</span>
+                            جنة الدنيا ومتاع الغرور
+                        </h3>
+                        <p class="story-description">زيف متاع الدنيا الفاني</p>
+                        <a href="https://www.mediafire.com/file/7oxydi7eli3octi/98-+%D8%AC%D9%86%D8%A9+%D8%A7%D9%84%D8%AF%D9%86%D9%8A%D8%A7+%D9%88%D9%85%D8%AA%D8%A7%D8%B9+%D8%A7%D9%84%D8%BA%D8%B1%D9%88%D8%B1.pdf/file" class="btn-download" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="index.html" class="btn-back">
+                    <i class="fas fa-home"></i> العودة إلى الصفحة الرئيسية
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 مدرسة العقيد لطفي - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

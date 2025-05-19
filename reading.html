@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مهارات القراءة والفهم القرائي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Amiri', serif;
+            background: linear-gradient(135deg, #f0f8ff, #e6f2ff);
+            color: #333;
+            line-height: 1.8;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+            position: relative;
+            min-height: 100vh;
+        }
+
+
+
+        .main-header {
+            background: linear-gradient(135deg, #004080, #003060);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 0;
+            font-size: 2.5em;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, #e6f2ff, #f0f8ff);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .level-box {
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+            border: 2px solid #004080;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .level-box:hover {
+            transform: scale(1.02);
+        }
+
+        .level-box h3 {
+            color: #003060;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .reading-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .reading-list li {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            border-radius: 10px;
+            border: 1px solid #e6f2ff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .reading-list li:hover {
+            background: linear-gradient(135deg, #e6f2ff, #f0f8ff);
+            transform: translateX(10px);
+        }
+
+        .example-box {
+            background: linear-gradient(135deg, #e6f2ff, #f0f8ff);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 2px solid #004080;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .example-box strong {
+            color: #003060;
+            font-size: 1.2em;
+        }
+
+        .icon {
+            margin-left: 10px;
+            color: #004080;
+            font-size: 1.2em;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #004080, #003060);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 64, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            transform: scale(1.2);
+            background: linear-gradient(135deg, #003060, #004080);
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #333;
+            padding: 25px 0;
+            background: #ffffff;
+            border-top: 2px solid #004080;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+            font-weight: bold;
+        }
+
+        /* تأثيرات إضافية */
+        .section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0, 64, 128, 0.05), rgba(0, 64, 128, 0.1));
+            z-index: -1;
+        }
+
+        .level-box::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0, 64, 128, 0.03), rgba(0, 64, 128, 0.05));
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+
+    <button class="back-button" onclick="window.location.href='index.html'">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+
+    <div class="reading-content">
+        <div class="main-header">
+            <h1>مهارات القراءة والفهم القرائي <i class="fas fa-book-reader"></i></h1>
+        </div>
+
+        <section>
+            <h2 class="section-header">📚 مهارات القراءة الأساسية</h2>
+            <div class="reading-list">
+                <li><i class="fas fa-book"></i> القراءة السريعة والفعالة</li>
+                <li><i class="fas fa-eye"></i> التعرف على الكلمات والجمل</li>
+                <li><i class="fas fa-lightbulb"></i> فهم المعاني والمضامين</li>
+                <li><i class="fas fa-link"></i> ربط المعلومات مع المعرفة السابقة</li>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-header">🎯 مستويات الفهم القرائي</h2>
+            <div class="level-box">
+                <h3>الفهم الحرفي (Literal)</h3>
+                <p>يتعلق بفهم النص كما هو دون تفسير أو تحليل، ويتمثل في:</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> تذكر المعلومات الأساسية</li>
+                    <li><i class="fas fa-check"></i> فهم العلاقات المباشرة</li>
+                    <li><i class="fas fa-check"></i> التعرف على الأحداث والشخصيات</li>
+                </ul>
+            </div>
+
+            <div class="level-box">
+                <h3>الفهم التحليلي (Interpretive)</h3>
+                <p>يتطلب فهماً أعمق للنص وفهم النوايا والدوافع:</p>
+                <ul>
+                    <li><i class="fas fa-search"></i> فهم الدوافع والأسباب</li>
+                    <li><i class="fas fa-search"></i> التحليل بين السطور</li>
+                    <li><i class="fas fa-search"></i> فهم العلاقات غير المباشرة</li>
+                </ul>
+            </div>
+
+            <div class="level-box">
+                <h3>الفهم النقدي (Critical)</h3>
+                <p>يتطلب تحليل النص وتقديم آراء ووجهات نظر:</p>
+                <ul>
+                    <li><i class="fas fa-balance-scale"></i> تقييم المحتوى</li>
+                    <li><i class="fas fa-balance-scale"></i> تحديد نقاط القوة والضعف</li>
+                    <li><i class="fas fa-balance-scale"></i> إبداء الرأي والتحليل النقدي</li>
+                </ul>
+            </div>
+
+            <div class="level-box">
+                <h3>الفهم الإبداعي (Creative)</h3>
+                <p>يتطلب استخدام المعرفة لإنشاء أفكار جديدة:</p>
+                <ul>
+                    <li><i class="fas fa-lightbulb"></i> اقتراح حلول جديدة</li>
+                    <li><i class="fas fa-lightbulb"></i> تطبيق المعرفة في سياقات مختلفة</li>
+                    <li><i class="fas fa-lightbulb"></i> إنشاء أعمال إبداعية مستوحاة من النص</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-header">💡 استراتيجيات تحسين الفهم القرائي</h2>
+            <div class="reading-list">
+                <li><i class="fas fa-pen"></i> التدوين أثناء القراءة</li>
+                <li><i class="fas fa-question"></i> طرح الأسئلة</li>
+                <li><i class="fas fa-image"></i> تصور ما يُقرأ</li>
+                <li><i class="fas fa-link"></i> ربط المعلومات مع المعرفة السابقة</li>
+                <li><i class="fas fa-clock"></i> القراءة المتكررة</li>
+                <li><i class="fas fa-users"></i> القراءة الجماعية</li>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة 2025 - مدرسة العقيد لطفي</p>
+    </footer>
+</body>
+</html>
