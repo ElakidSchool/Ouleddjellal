@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قصص المكتبة الخضراء | مدرسة العقيد لطفي</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a5f2d;
+            --secondary-color: #2e8b57;
+            --accent-color: #f1c40f;
+            --light-color: #f8f9fa;
+            --dark-color: #1e3c1e;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(135deg, #f0fff0 0%, #e0f7e0 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            color: #2c3e50;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="rgba(255,255,255,0.1)"><path d="M30,50 Q50,30 70,50 T90,50"/></svg>') repeat;
+            opacity: 0.3;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .book-icon {
+            font-size: 4rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .content {
+            padding: 3rem 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .story-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-right: 4px solid var(--accent-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .story-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .story-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+
+        .story-number {
+            display: inline-block;
+            background: var(--accent-color);
+            color: #000;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-left: 0.5rem;
+        }
+
+        .btn-story {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: auto;
+            transition: all 0.3s ease;
+        }
+
+        .btn-story:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-back {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        .islamic-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="%231a5f2d" stroke-width="0.5" opacity="0.1"/></svg>');
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .content {
+                padding: 1.5rem 1rem;
+            }
+            
+            .stories-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="islamic-pattern"></div>
+    
+    <header class="header">
+        <div class="container">
+            <i class="fas fa-book-open book-icon"></i>
+            <h1 class="title">قصص المكتبة الخضراء</h1>
+            <p class="subtitle">مجموعة رائعة من القصص الممتعة والهادفة</p>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="container">
+            <div class="stories-grid">
+                <!-- Story 1 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">1</span>
+                            البنت و الأسد
+                        </h3>
+                        <p>قصة مؤثرة عن صداقة غير متوقعة بين فتاة وأسد.</p>
+                        <a href="http://www.mediafire.com/file/4tyygz0szm1esc6/16-%25D8%25A7%25D9%2584%25D8%25A8%25D9%2586%25D8%25AA_%25D9%2588_%25D8%25A7%25D9%2584%25D8%25A3%25D8%25B3%25D8%25AF.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 2 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">2</span>
+                            الجميلة النائمة
+                        </h3>
+                        <p>قصة ساحرة عن الأميرة التي نامت لمئة عام.</p>
+                        <a href="http://www.mediafire.com/file/h91dsqptvn788ux/12-%25D8%25A7%25D9%2584%25D8%25AC%25D9%2585%25D9%258A%25D9%2584%25D8%25A9_%25D8%25A7%25D9%2584%25D9%2586%25D8%25A7%25D8%25A6%25D9%2585%25D8%25A9.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 3 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">3</span>
+                            الأنف العجيب
+                        </h3>
+                        <p>قصة طريفة عن أنف له قوى سحرية مدهشة.</p>
+                        <a href="http://www.mediafire.com/file/ckgbbkzh8xflxua/11-%25D8%25A7%25D9%2584%25D8%25A3%25D9%2586%25D9%2581_%25D8%25A7%25D9%2584%25D8%25B9%25D8%25AC%25D9%258A%25D8%25A8.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 4 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">4</span>
+                            البلبل
+                        </h3>
+                        <p>قصة عذوبة الصوت وقوة الإرادة.</p>
+                        <a href="http://www.mediafire.com/file/n3z9c83420z53z1/10-%25D8%25A7%25D9%2584%25D8%25A8%25D9%2584%25D8%25A8%25D9%2584.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 5 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">5</span>
+                            الملك العادل
+                        </h3>
+                        <p>قصة عن العدل والحكمة في حكم المملكة.</p>
+                        <a href="http://www.mediafire.com/file/01zjicsj9zjeufp/09-%25D8%25A7%25D9%2584%25D9%2585%25D9%2584%25D9%2583_%25D8%25B9%25D8%25A7%25D8%25AF%25D9%2584.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 6 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">6</span>
+                            البجعات المتوحشات
+                        </h3>
+                        <p>مغامرة شيقة مع البجعات البرية.</p>
+                        <a href="http://www.mediafire.com/file/lp11evv801vjq3e/05-%25D8%25A7%25D9%2584%25D8%25A8%25D8%25AC%25D8%25B9%25D8%25A7%25D8%25AA_%25D8%25A7%25D9%2584%25D9%2585%25D8%25AA%25D9%2588%25D8%25AD%25D8%25B4%25D8%25A7%25D8%25AA.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 7 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">7</span>
+                            الأميرة الحسناء
+                        </h3>
+                        <p>قصة ساحرة عن جمال الروح قبل المظهر.</p>
+                        <a href="http://www.mediafire.com/file/hcta2ujv9du23ou/06-%25D8%25A7%25D9%2584%25D8%25A3%25D9%2585%25D9%258A%25D8%25B1%25D8%25A9_%25D8%25A7%25D9%2584%25D8%25AD%25D8%25B3%25D9%2586%25D8%25A7%25D8%25A1.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 8 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">8</span>
+                            الرفيق المجهول
+                        </h3>
+                        <p>قصة غامضة عن صديق مجهول يظهر في الأوقات الصعبة.</p>
+                        <a href="http://www.mediafire.com/file/8zi5ttby7c3pd0h/07-%25D8%25A7%25D9%2584%25D8%25B1%25D9%2581%25D9%258A%25D9%2582_%25D8%25A7%25D9%2584%25D9%2585%25D8%25AC%25D9%2587%25D9%2588%25D9%2584.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 9 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">9</span>
+                            الأميرة و الثعبان
+                        </h3>
+                        <p>قصة حب غير متوقعة بين أميرة وثعبان.</p>
+                        <a href="http://www.mediafire.com/file/3uvzvocxjd97aaf/08-%25D8%25A7%25D9%2584%25D8%25A3%25D9%2585%25D9%258A%25D8%25B1%25D8%25A9_%25D9%2588_%25D8%25A7%25D9%2584%25D8%25AB%25D8%25B9%25D8%25A8%25D8%25A7%25D9%2586.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 10 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">10</span>
+                            القداحة العجيبة
+                        </h3>
+                        <p>مغامرة مع قداحة سحرية تمنح أمنيات غير متوقعة.</p>
+                        <a href="http://www.mediafire.com/file/z8k4ii8oeo0068m/04-%25D8%25A7%25D9%2584%25D9%2582%25D8%25AF%25D8%25A7%25D8%25AD%25D8%25A9_%25D8%25A7%25D9%2584%25D8%25B9%25D8%25AC%25D9%258A%25D8%25A8%25D8%25A9.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 11 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">11</span>
+                            طيور الأحلام
+                        </h3>
+                        <p>رحلة سحرية مع طيور تحقق الأحلام في عالم خيالي رائع.</p>
+                        <a href="http://www.mediafire.com/file/dgg3h1o3ts56gfv/57-%25D8%25B7%25D9%258A%25D9%2588%25D8%25B1_%25D8%25A7%25D9%2584%25D8%25A3%25D8%25AD%25D9%2584%25D8%25A7%25D9%2585.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 12 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">12</span>
+                            حلم من دخان
+                        </h3>
+                        <p>قصة غامضة عن حلم يتحول إلى حقيقة عبر سحابة من الدخان.</p>
+                        <a href="http://www.mediafire.com/file/2rdl64xb5pqudx8/50-%25D8%25AD%25D9%2584%25D9%2585_%25D9%2585%25D9%2586_%25D8%25AF%25D8%25AE%25D8%25A7%25D9%2586.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 13 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">13</span>
+                            بلاد النهر
+                        </h3>
+                        <p>مغامرة في بلاد ساحرة يعبرها نهر عجيب.</p>
+                        <a href="http://www.mediafire.com/file/5b6ibtc7ex669t2/51-%25D8%25A8%25D9%2584%25D8%25A7%25D8%25AF_%25D8%25A7%25D9%2584%25D9%2586%25D9%2587%25D8%25B1.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 14 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">14</span>
+                            حسناء و الثعبان الملكي
+                        </h3>
+                        <p>قصة حب أسطورية بين حسناء وثعبان ملكي سحري.</p>
+                        <a href="http://www.mediafire.com/file/yd1cmp3my0hf836/52-%25D8%25AD%25D8%25B3%25D9%2586%25D8%25A7%25D8%25A1_%25D9%2588_%25D8%25A7%25D9%2584%25D8%25AB%25D8%25B9%25D8%25A8%25D8%25A7%25D8%25A8_%25D8%25A7%25D9%2584%25D9%2585%25D9%2584%25D9%2583%25D9%258A.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 15 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">15</span>
+                            تائه في القناة
+                        </h3>
+                        <p>مغامرة مشوقة لفتى ضاع في قناة مائية غامضة.</p>
+                        <a href="http://www.mediafire.com/file/n0ftd30tbx3f5td/53-%25D8%25AA%25D8%25A7%25D8%25A6%25D9%2587_%25D9%2581%25D9%258A_%25D8%25A7%25D9%2584%25D9%2582%25D9%2586%25D8%25A7%25D8%25A9.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 16 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">16</span>
+                            الطبلة المسحورة
+                        </h3>
+                        <p>قصة غامضة عن طبلة سحرية تصنع المعجزات.</p>
+                        <a href="http://www.mediafire.com/file/iz955rr7xh47ix3/49-%25D8%25A7%25D9%2584%25D8%25B7%25D8%25A8%25D9%2584%25D8%25A9_%25D8%25A7%25D9%2584%25D9%2585%25D8%25B3%25D8%25AD%25D9%2588%25D8%25B1%25D8%25A9.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 17 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">17</span>
+                            أمير في بلاد الأقزام
+                        </h3>
+                        <p>مغامرة أمير في عالم الأقزام السحري.</p>
+                        <a href="http://www.mediafire.com/file/zp0pl5zab9ck2h8/48-%25D8%25A3%25D9%2585%25D9%258A%25D8%25B1_%25D9%2581%25D9%258A_%25D8%25A8%25D9%2584%25D8%25A7%25D8%25AF_%25D8%25A7%25D9%2584%25D8%25A3%25D9%2582%25D8%25B2%25D8%25A7%25D9%2585.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 18 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">18</span>
+                            مغامرة زهرة مع شجرة
+                        </h3>
+                        <p>قصة مؤثرة عن صداقة غير عادية بين زهرة وشجرة.</p>
+                        <a href="http://www.mediafire.com/file/uwguqg5v7qf1oxy/47-%25D9%2585%25D8%25BA%25D8%25A7%25D9%2585%25D8%25B1%25D8%25A9_%25D8%25B2%25D9%2587%25D8%25B1%25D8%25A9_%25D9%2585%25D8%25B9_%25D8%25A7%25D9%2584%25D8%25B4%25D8%25AC%25D8%25B1%25D8%25A9.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 19 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">19</span>
+                            بدر البدور و الحصان المسحور
+                        </h3>
+                        <p>مغامرة بطل شجاع مع حصان سحري ذو قوى خارقة.</p>
+                        <a href="http://www.mediafire.com/file/vv4ykctozgl57u9/46-%25D8%25A8%25D8%25AF%25D8%25B1_%25D8%25A7%25D9%2584%25D8%25A8%25D8%25AF%25D9%2588%25D8%25B1_%25D9%2588_%25D8%25A7%25D9%2584%25D8%25AD%25D8%25B5%25D8%25A7%25D9%2586_%25D8%25A7%25D9%2584%25D9%2585%25D8%25B3%25D8%25AD%25D9%2588%25D8%25B1.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 20 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">20</span>
+                            عفاريت نصف الليل
+                        </h3>
+                        <p>مغامرة غامضة مع كائنات سحرية تظهر في منتصف الليل.</p>
+                        <a href="http://www.mediafire.com/file/wvxx44dr6ahbcrv/42-%25D8%25B9%25D9%2581%25D8%25A7%25D8%25B1%25D9%258A%25D8%25AA_%25D9%2586%25D8%25B5%25D9%2581_%25D8%25A7%25D9%2584%25D9%2584%25D9%258A%25D9%2584.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 21 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">21</span>
+                            النجم الكبير
+                        </h3>
+                        <p>قصة شيقة عن نجم كبير يحمل أسراراً عجيبة.</p>
+                        <a href="http://www.mediafire.com/file/w97yeed19msdnyo/43-%25D8%25A7%25D9%2584%25D9%2586%25D8%25AC%25D9%2585_%25D8%25A7%25D9%2584%25D9%2583%25D8%25A8%25D9%258A%25D8%25B1.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 22 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">22</span>
+                            مملكة العدل
+                        </h3>
+                        <p>قصة عن مملكة يسودها العدل والإنصاف.</p>
+                        <a href="http://www.mediafire.com/file/blj88br6z6vudr3/44-%25D9%2585%25D9%2585%25D9%2584%25D9%2583%25D8%25A9_%25D8%25A7%25D9%2584%25D8%25B9%25D8%25AF%25D9%2584.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 23 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">23</span>
+                            الصياد المسكين و المارد اللعين
+                        </h3>
+                        <p>قصة شيقة عن صياد مسكين ومارد مخادع.</p>
+                        <a href="http://www.mediafire.com/file/w608gzmufkarnta/45-%25D8%25A7%25D9%2584%25D8%25B5%25D9%258A%25D8%25A7%25D8%25AF_%25D8%25A7%25D9%2584%25D9%2585%25D8%25B3%25D9%2583%25D9%258A%25D9%2586_%25D9%2588_%25D8%25A7%25D9%2584%25D9%2585%25D8%25A7%25D8%25B1%25D8%25AF_%25D8%25A7%25D9%2584%25D9%2584%25D8%25B9%25D9%258A%25D9%2586.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 24 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">24</span>
+                            التاج المسحور
+                        </h3>
+                        <p>قصة مثيرة عن تاج سحري بأسرار غامضة.</p>
+                        <a href="http://www.mediafire.com/file/y0dudgnxhdjf0md/41-%25D8%25A7%25D9%2584%25D8%25AA%25D8%25A7%25D8%25AC_%25D8%25A7%25D9%2584%25D9%2585%25D8%25B3%25D8%25AD%25D9%2588%25D8%25B1.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 25 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">25</span>
+                            سر العلبة الذهبية
+                        </h3>
+                        <p>قصة شيقة عن سر علبة ذهبية غامضة.</p>
+                        <a href="http://www.mediafire.com/file/pp767v2723c5hz2/40-%25D8%25B3%25D8%25B1_%25D8%25A7%25D9%2584%25D8%25B9%25D9%2584%25D8%25A8%25D8%25A9_%25D8%25A7%25D9%2584%25D8%25B0%25D9%2587%25D8%25A8%25D9%258A%25D8%25A9.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 26 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">26</span>
+                            الرحلة العجيبة لعروس النيل
+                        </h3>
+                        <p>قصة عجيبة عن رحلة عروس النيل.</p>
+                        <a href="http://www.mediafire.com/file/fq268t0o9tnc58i/39-%25D8%25A7%25D9%2584%25D8%25B1%25D8%25AD%25D9%2584%25D8%25A9_%25D8%25A7%25D9%2584%25D8%25B9%25D8%25AC%25D9%258A%25D8%25A8%25D8%25A9_%25D9%2584%25D8%25B9%25D8%25B1%25D9%2588%25D8%25B3_%25D8%25A7%25D9%2584%25D9%2586%25D9%258A%25D9%2584.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 27 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">27</span>
+                            القدم الذهبية
+                        </h3>
+                        <p>قصة شيقة عن قدم ذهبية غامضة.</p>
+                        <a href="http://www.mediafire.com/file/ib1yx0iglfwk3jn/38-%25D8%25A7%25D9%2584%25D9%2582%25D8%25AF%25D9%2585_%25D8%25A7%25D9%2584%25D8%25B0%25D9%2587%25D8%25A8%25D9%258A%25D8%25A9.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 28 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">28</span>
+                            المرآة السحرية
+                        </h3>
+                        <p>قصة ساحرة عن مرآة سحرية غريبة.</p>
+                        <a href="http://www.mediafire.com/file/j5ym8r64b3ya4jt/33-%25D8%25A7%25D9%2584%25D9%2585%25D8%25B1%25D8%25A2%25D8%25A9_%25D8%25A7%25D9%2584%25D8%25B3%25D8%25AD%25D8%25B1%25D9%258A%25D8%25A9.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 29 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">29</span>
+                            بنات الصياد
+                        </h3>
+                        <p>قصة مؤثرة عن بنات صياد شجاعات.</p>
+                        <a href="http://www.mediafire.com/file/2f7vxwbp212sc7p/34-%25D8%25A8%25D9%2586%25D8%25A7%25D8%25AA_%25D8%25A7%25D9%2584%25D8%25B5%25D9%258A%25D8%25A7%25D8%25AF.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 30 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">30</span>
+                            الوزير الحكيم
+                        </h3>
+                        <p>قصة حكيمة عن وزير عادل وحكيم.</p>
+                        <a href="http://www.mediafire.com/file/5k0ia6hm0tqlqox/35-%25D8%25A7%25D9%2584%25D9%2588%25D8%25B2%25D9%258A%25D8%25B1_%25D8%25A7%25D9%2584%25D8%25AD%25D9%2583%25D9%258A%25D9%2585.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 31 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">31</span>
+                            سر الشعر الأسود
+                        </h3>
+                        <p>قصة غامضة عن سر الشعر الأسود السحري.</p>
+                        <a href="http://www.mediafire.com/file/9hbh79buzbal379/37-%25D8%25B3%25D8%25B1_%25D8%25A7%25D9%2584%25D8%25B4%25D8%25B9%25D8%25B1_%25D8%25A7%25D9%2584%25D8%25A3%25D8%25B3%25D9%2588%25D8%25AF.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 32 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">32</span>
+                            أميرة القصر الذهبي
+                        </h3>
+                        <p>قصة ساحرة عن أميرة تعيش في قصر ذهبي سحري.</p>
+                        <a href="http://www.mediafire.com/file/3sduq2cqpejw8wh/29-%25D8%25A7%25D9%2584%25D8%25A3%25D9%2585%25D9%258A%25D8%25B1%25D8%25A9_%25D8%25A7%25D9%2584%25D9%2582%25D8%25B5%25D8%25B1_%25D8%25A7%25D9%2584%25D8%25B0%25D9%2587%25D8%25A8%25D9%258A.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 33 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">33</span>
+                            دنانير لبلبة
+                        </h3>
+                        <p>قصة مشوقة عن لبلبة ودنانيرها السحرية.</p>
+                        <a href="http://www.mediafire.com/file/j8pvrpkgk47dsd1/30-%25D8%25AF%25D9%2586%25D8%25A7%25D9%2586%25D9%258A%25D8%25B1_%25D9%2584%25D8%25A8%25D9%2584%25D8%25A8%25D8%25A9.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 34 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">34</span>
+                            نهر الذهب
+                        </h3>
+                        <p>قصة مثيرة عن نهر أسطوري من الذهب.</p>
+                        <a href="http://www.mediafire.com/file/qqrb23qazy5wu3m/31-%25D9%2586%25D9%2587%25D8%25B1_%25D8%25A7%25D9%2584%25D8%25B0%25D9%2587%25D8%25A8.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 35 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">35</span>
+                            خاتم السلطان
+                        </h3>
+                        <p>قصة شيقة عن خاتم سحري يملكه سلطان عظيم.</p>
+                        <a href="http://www.mediafire.com/file/9z2pe7liz02eivh/32-%25D8%25AE%25D8%25A7%25D8%25AA%25D9%2585_%25D8%25A7%25D9%2584%25D8%25B3%25D9%2584%25D8%25B7%25D8%25A7%25D9%2586.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 36 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">36</span>
+                            الصياد الماهر
+                        </h3>
+                        <p>قصة مشوقة عن صياد ماهر ومغامراته.</p>
+                        <a href="http://www.mediafire.com/file/81r30jl6at10b0g/25-%25D8%25A7%25D9%2584%25D8%25B5%25D9%258A%25D8%25A7%25D8%25AF_%25D8%25A7%25D9%2584%25D9%2585%25D8%25A7%25D9%2587%25D8%25B1.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 37 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">37</span>
+                            الكرة الذهبية
+                        </h3>
+                        <p>قصة ساحرة عن كرة ذهبية سحرية.</p>
+                        <a href="http://www.mediafire.com/file/g55uifskfietumw/26-%25D8%25A7%25D9%2584%25D9%2583%25D8%25B1%25D8%25A9_%25D8%25A7%25D9%2584%25D8%25B0%25D9%2587%25D8%25A8%25D9%258A%25D8%25A9.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 38 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">38</span>
+                            الشاطر محظوظ
+                        </h3>
+                        <p>قصة طريفة عن شاطر محظوظ.</p>
+                        <a href="http://www.mediafire.com/file/tsupwryyw8qt7z7/27-%25D8%25A7%25D9%2584%25D8%25B4%25D8%25A7%25D8%25B7%25D8%25B1_%25D9%2585%25D8%25AD%25D8%25B8%25D9%2588%25D8%25B8.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 39 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">39</span>
+                            الحصان الطيار
+                        </h3>
+                        <p>قصة مثيرة عن حصان سحري يطير.</p>
+                        <a href="http://www.mediafire.com/file/87brfp3xgosw664/28-%25D8%25A7%25D9%2584%25D8%25AD%25D8%25B5%25D8%25A7%25D9%2586_%25D8%25A7%25D9%2584%25D8%25B7%25D9%258A%25D8%25A7%25D8%25B1.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 40 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">40</span>
+                            الفأرة البيضاء
+                        </h3>
+                        <p>قصة لطيفة عن فأرة بيضاء شجاعة.</p>
+                        <a href="http://www.mediafire.com/file/a78mutzcvawbct2/21-%25D8%25A7%25D9%2584%25D9%2581%25D8%25A3%25D8%25B1%25D8%25A9_%25D8%25A7%25D9%2584%25D8%25A8%25D9%258A%25D8%25B6%25D8%25A7%25D8%25A1.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 41 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">41</span>
+                            جبل العجائب
+                        </h3>
+                        <p>قصة ساحرة عن جبل يحمل في طياته عجائب لا تعد ولا تحصى.</p>
+                        <a href="http://www.mediafire.com/file/c143fqdw9whjq1j/22-%25D8%25AC%25D8%25A8%25D9%2584_%25D8%25A7%25D9%2584%25D8%25B9%25D8%25AC%25D8%25A7%25D8%25A6%25D8%25A8.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 42 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">42</span>
+                            أليس في بلاد العجائب
+                        </h3>
+                        <p>مغامرة ساحرة لأليس في عالم مليء بالعجائب والأسرار.</p>
+                        <a href="http://www.mediafire.com/file/35a3u4i20xbvx9o/23-%25D8%25A7%25D9%2584%25D9%258A%25D8%25B3_%25D9%2581%25D9%258A_%25D8%25A8%25D9%2584%25D8%25A7%25D8%25AF_%25D8%25A7%25D9%2584%25D8%25B9%25D8%25AC%25D8%25A7%25D8%25A6%25D8%25A8.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 43 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">43</span>
+                            الراعي الشجاع
+                        </h3>
+                        <p>قصة ملهمة عن راعي غنم يتحلى بالشجاعة والإصرار.</p>
+                        <a href="http://www.mediafire.com/file/43q9cqxg1cwjdxt/24-%25D8%25A7%25D9%2584%25D8%25B1%25D8%25A7%25D8%25B9%25D9%258A_%25D8%25A7%25D9%2584%25D8%25B4%25D8%25AC%25D8%25A7%25D8%25B9.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 44 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">44</span>
+                            في جزيرة النور
+                        </h3>
+                        <p>مغامرة مشوقة في جزيرة ساحرة تنير بنورها العجيب.</p>
+                        <a href="http://www.mediafire.com/file/gezm97a7whwqjc0/20-%25D9%2581%25D9%258A_%25D8%25AC%25D8%25B2%25D9%258A%25D8%25B1%25D8%25A9_%25D8%25A7%25D9%2584%25D9%2586%25D9%2588%25D8%25B1.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 45 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">45</span>
+                            الليمون العجيب
+                        </h3>
+                        <p>قصة طريفة عن ليمونة سحرية ذات قوة خارقة.</p>
+                        <a href="http://www.mediafire.com/file/i2ate3ln4r2qj3h/19-%25D8%25A7%25D9%2584%25D9%2584%25D9%258A%25D9%2585%25D9%2588%25D9%2586_%25D8%25A7%25D9%2584%25D8%25B9%25D8%25AC%25D9%258A%25D8%25A8.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 46 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">46</span>
+                            قصير الذيل
+                        </h3>
+                        <p>قصة ممتعة عن مخلوق صغير بذيل قصير ومغامراته.</p>
+                        <a href="http://www.mediafire.com/file/65xnegjm5i8b5xn/18-%25D9%2582%25D8%25B5%25D9%258A%25D8%25B1_%25D8%25A7%25D9%2584%25D8%25B0%25D9%258A%25D9%2584.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 47 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">47</span>
+                            المغامر الجريء
+                        </h3>
+                        <p>قصة مشوقة عن مغامر شجاع يواجه التحديات.</p>
+                        <a href="http://www.mediafire.com/file/9iyhq6kfu3bdv88/17-%25D8%25A7%25D9%2584%25D9%2585%25D8%25BA%25D8%25A7%25D9%2585%25D8%25B1_%25D8%25A7%25D9%2584%25D8%25AC%25D8%25B1%25D9%258A%25D8%25A1.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 48 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">48</span>
+                            عروس البحر
+                        </h3>
+                        <p>قصة ساحرة عن عروس البحر وأسرار أعماق المحيط.</p>
+                        <a href="http://www.mediafire.com/file/5q935ss2e0oa134/13-%25D8%25B9%25D8%25B1%25D9%2588%25D8%25B3_%25D8%25A7%25D9%2584%25D8%25A8%25D8%25AD%25D8%25B1.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 49 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">49</span>
+                            عقلة الأصبع
+                        </h3>
+                        <p>مغامرات طريفة لصغير بحجم عقلة الأصبع في عالم كبير.</p>
+                        <a href="http://www.mediafire.com/file/aojw2w1s0et57aw/14-%25D8%25B9%25D9%2582%25D9%2584%25D8%25A9_%25D8%25A7%25D9%2584%25D8%25A3%25D8%25B5%25D8%25A8%25D8%25B9.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 50 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">50</span>
+                            الأخوات الثلاث
+                        </h3>
+                        <p>قصة مؤثرة عن ثلاث أخوات ومصيرهن المدهش.</p>
+                        <a href="http://www.mediafire.com/file/4ucyr59ug010ol9/15-%25D8%25A7%25D9%2584%25D8%25A3%25D8%25AE%25D9%2588%25D8%25A7%25D8%25AA_%25D8%25A7%25D9%2584%25D8%25AB%25D9%2584%25D8%25A7%25D8%25AB.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-book-reader"></i> اقرأ القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 51 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">51</span>
+                            ضوء النهار و الملك زنكار
+                        </h3>
+                        <a href="http://www.mediafire.com/file/m831ed20xv4ppb7/55-%2525D8%2525B6%2525D9%252588%2525D8%2525A1_%2525D8%2525A7%2525D9%252584%2525D9%252586%2525D9%252587%2525D8%2525A7%2525D8%2525B1_%2525D9%252588_%2525D8%2525A7%2525D9%252584%2525D9%252585%2525D9%252584%2525D9%252583_%2525D8%2525B2%2525D9%252586%2525D9%252583%2525D8%2525A7%2525D8%2525B1.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 52 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">52</span>
+                            الأميرة المخطوفة
+                        </h3>
+                        <p>قصة شيقة عن أميرة تم اختطافها ومحاولة إنقاذها.</p>
+                        <a href="http://www.mediafire.com/file/3jak9d5fbog8h84/60-%2525D8%2525A7%2525D9%252584%2525D8%2525A3%2525D9%252585%2525D9%25258A%2525D8%2525B1%2525D8%2525A9_%2525D8%2525A7%2525D9%252584%2525D9%252585%2525D8%2525AE%2525D8%2525B7%2525D9%252588%2525D9%252581%2525D8%2525A9.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 53 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">60</span>
+                            الأميرة المخطوفة
+                        </h3>
+                        <a href="http://www.mediafire.com/file/3jak9d5fbog8h84/60-%2525D8%2525A7%2525D9%252584%2525D8%2525A3%2525D9%252585%2525D9%25258A%2525D8%2525B1%2525D8%2525A9_%2525D8%2525A7%2525D9%252584%2525D9%252585%2525D8%2525AE%2525D8%2525B7%2525D9%252588%2525D9%252581%2525D8%2525A9.pdf/file" class="btn-story" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 61 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">61</span>
+                            الكسلان و تاج السلطان
+                        </h3>
+                        <a href="http://www.mediafire.com/file/z6m5crwuukiewu1/62-%2525D8%2525A7%2525D9%252584%2525D9%252583%2525D8%2525B3%2525D9%252584%2525D8%2525A7%2525D9%252588_%2525D9%252588_%2525D8%2525AA%2525D8%2525A7%2525D8%2525AC_%2525D8%2525A7%2525D9%252584%2525D8%2525B3%2525D9%252584%2525D8%2525B7%2525D8%2525A7%2525D9%252586.PDF/file" class="btn-story" target="_blank">
+                            <i class="fas fa-download"></i> تحميل القصة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 62 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">62</span>
+                            الكسلان و تاج السلطان
+                        </h3>
+                        <p>قصة شيقة عن الكسلان الذي وجد تاج السلطان الضائع.</p>
+                        <a href="http://www.mediafire.com/file/z6m5crwuukiewu1/62-%2525D8%2525A7%2525D9%252584%2525D9%252583%2525D8%2525B3%2525D9%252584%2525D8%2525A7%2525D9%252588_%2525D9%252588_%2525D8%2525AA%2525D8%2525A7%2525D8%2525AC_%2525D8%2525A7%2525D9%252584%2525D8%2525B3%2525D9%252584%2525D8%2525B7%2525D8%2525A7%2525D9%252586.PDF/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 63 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">63</span>
+                            السلطان المسحور
+                        </h3>
+                        <p>قصة شيقة عن سلطان تعرض للسحر وكيفية تحريره منه.</p>
+                        <a href="http://www.mediafire.com/file/71vap7i0oa18fm3/03-%25D8%25A7%25D9%2584%25D8%25B3%25D9%2584%25D8%25B7%25D8%25A7%25D9%2586_%25D8%25A7%25D9%2584%25D9%2585%25D8%25B3%25D8%25AD%25D9%2588%25D8%25B1.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 64 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">64</span>
+                            سندريلا
+                        </h3>
+                        <p>قصة سندريلا الكلاسيكية عن الفتاة الطيبة التي تغلبت على الصعاب.</p>
+                        <a href="http://www.mediafire.com/file/c3d6jwbl3lmnns5/02-%25D8%25B3%25D9%2586%25D8%25AF%25D8%25B1%25D9%258A%25D9%2584%25D8%25A7.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story 65 -->
+                <div class="story-card">
+                    <div class="story-content">
+                        <h3 class="story-title">
+                            <span class="story-number">65</span>
+                            أطفال الغابة
+                        </h3>
+                        <p>مغامرات مشوقة لأطفال يعيشون في أحضان الطبيعة.</p>
+                        <a href="http://www.mediafire.com/file/fhw516d2f1i64bd/01-%25D8%25A3%25D8%25B7%25D9%2581%25D8%25A7%25D9%2584_%25D8%25A7%25D9%2584%25D8%25BA%25D8%25A7%25D8%25A8%25D8%25A9.pdf/file" class="btn-story" target="_blank">
+                            اقرأ القصة
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="green-library.html" class="btn-back">
+                    <i class="fas fa-arrow-right"></i> العودة إلى المكتبة
+                </a>
+                <a href="../index.html" class="btn-back">
+                    <i class="fas fa-home"></i> الصفحة الرئيسية
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 مدرسة العقيد لطفي - جميع الحقوق محفوظة</p>
+            <p>المكتبة الخضراء للأطفال - مشروع تعليمي ترفيهي</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

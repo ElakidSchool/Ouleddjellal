@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المكتبة الخضراء للأطفال | مدرسة العقيد لطفي</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a5f2d;
+            --secondary-color: #2e8b57;
+            --accent-color: #f1c40f;
+            --light-color: #f8f9fa;
+            --dark-color: #1e3c1e;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(135deg, #f0fff0 0%, #e0f7e0 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            color: #2c3e50;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="rgba(255,255,255,0.1)"><path d="M30,50 Q50,30 70,50 T90,50"/></svg>') repeat;
+            opacity: 0.3;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .book-icon {
+            font-size: 4rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .content {
+            padding: 3rem 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-right: 5px solid var(--accent-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-weight: bold;
+            font-size: 1.3rem;
+            padding: 1rem 1.5rem;
+            border-bottom: none;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border: none;
+            padding: 0.6rem 1.5rem;
+            font-weight: bold;
+            border-radius: 50px;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            background: white;
+        }
+
+        .btn-outline-primary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        .decoration {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .content {
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        /* Islamic Patterns */
+        .islamic-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="%231a5f2d" stroke-width="0.5" opacity="0.1"/></svg>');
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="islamic-pattern"></div>
+    
+    <header class="header">
+        <div class="container">
+            <i class="fas fa-book-open book-icon"></i>
+            <h1 class="title">المكتبة الخضراء للأطفال</h1>
+            <p class="subtitle">مكتبة مليئة بالقصص المشوقة والهادفة للأطفال</p>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-info-circle me-2"></i>عن المكتبة الخضراء
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                المكتبة الخضراء للأطفال هي سلسلة من الكتب القصصية الموجّهة للأطفال، تتميز بلون غلافها الأخضر، 
+                                وقد اشتهرت في العالم العربي منذ النصف الثاني من القرن العشرين. تهدف هذه السلسلة إلى تنمية 
+                                الخيال، وتعزيز القيم الأخلاقية، وتبسيط المفاهيم الثقافية والتربوية من خلال قصص مشوقة 
+                                مستوحاة من التراث العالمي والمحلي.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-star me-2"></i>أهم خصائص المكتبة الخضراء
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>اللغة السهلة والسلسة: تناسب الأطفال في المراحل الأولى من القراءة.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>الرسومات المرافقة: تُسهم في شد انتباه الطفل وتوضيح مجريات القصة.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>القصص الهادفة: تتضمن حكمًا ومواعظ وقيمًا مثل الصدق، التعاون، الشجاعة، والإيثار.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>تنوع المصادر: تضم قصصًا عالمية مثل "سندريلا" و"علاء الدين"، وأخرى من التراث العربي أو قصص تربوية مبتكرة.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>الناشر: نُشرت عن طريق دور نشر متعددة، وكان من أشهرها "دار المعارف" المصرية.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-bullseye me-2"></i>الهدف من المكتبة
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                ترسيخ حب المطالعة لدى الأطفال، وتعويدهم على القراءة الممتعة المفيدة منذ الصغر، 
+                                من خلال محتوى تربوي، أدبي، وترفيهي في آنٍ واحد.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-5">
+                        <a href="stories.html" class="btn btn-primary">
+                            <i class="fas fa-book-reader"></i> تصفح القصص
+                        </a>
+                        <a href="../index.html" class="btn btn-outline-primary btn-lg">
+                            <i class="fas fa-home"></i> العودة للصفحة الرئيسية
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 مدرسة العقيد لطفي - جميع الحقوق محفوظة</p>
+            <p>المكتبة الخضراء للأطفال - مشروع تعليمي ترفيهي</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
